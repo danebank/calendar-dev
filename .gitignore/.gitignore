@@ -15,7 +15,7 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
-.svn
+.svn/
 composer.lock
 /vendor
 
