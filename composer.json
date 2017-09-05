@@ -11,6 +11,7 @@
         "wpackagist-plugin/pagerestrict":"*",
         "wpackagist-plugin/my-wp-health-check":"*",
         "wpackagist-plugin/amazon-web-services": "*",
-        "wpackagist-plugin/amazon-s3-and-cloudfront": "*"
+        "wpackagist-plugin/amazon-s3-and-cloudfront": "*",
+        "wpackagist-plugin/the-events-calendar": "*"
     }
 }

@@ -205,5 +205,27 @@
         "type": "wordpress-plugin",
         "installation-source": "dist",
         "homepage": "https://wordpress.org/plugins/amazon-s3-and-cloudfront/"
+    },
+    {
+        "name": "wpackagist-plugin/the-events-calendar",
+        "version": "4.5.11",
+        "version_normalized": "4.5.11.0",
+        "source": {
+            "type": "svn",
+            "url": "https://plugins.svn.wordpress.org/the-events-calendar/",
+            "reference": "tags/4.5.11"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://downloads.wordpress.org/plugin/the-events-calendar.4.5.11.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "composer/installers": "~1.0"
+        },
+        "type": "wordpress-plugin",
+        "installation-source": "dist",
+        "homepage": "https://wordpress.org/plugins/the-events-calendar/"
     }
 ]
