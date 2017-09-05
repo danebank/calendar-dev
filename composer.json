@@ -1,0 +1,16 @@
+{
+    "name": "danebank/calendar-dev",
+    "description": "Danebank Calendar v2",
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "wpackagist-plugin/pagerestrict":"*",
+        "wpackagist-plugin/my-wp-health-check":"*",
+        "wpackagist-plugin/amazon-web-services": "*",
+        "wpackagist-plugin/amazon-s3-and-cloudfront": "*"
+    }
+}
