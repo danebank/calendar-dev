@@ -1,0 +1,56 @@
+/*
+ Theme Name:   Danebank Bootstrap Theme
+ Theme URI:    http://example.com/twenty-fifteen-child/
+ Description:  WP-Bootstrap-Starter Child Theme
+ Author:       James Davis
+ Author URI:   http://example.com
+ Template:     wp-bootstrap-starter
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  wp-bootstrap-starter-child
+*/
+
+body {
+  font-family: Lato;
+  font-weight: normal;
+  border-top-style: solid;
+  border-top-color: #00aab8;
+  border-top-width: 20px;
+}
+header h1 {
+  color: #00453e;
+  font-size: 42px;
+  font-weight: 500;
+  font-family: "Lato", sans-serif;
+  padding: 1.25rem 0 0.75rem;
+}
+.header-image {
+  background-image: url('./images/header-120px.svg');
+  background-size: cover;
+  height:120px;
+  margin-top: 15px;
+  padding-top: 42px;
+}
+header#masthead {
+    box-shadow: none;
+    margin-bottom: 0;
+}
+#content.site-content {
+  padding-bottom: 3.75rem;
+  padding-top: 1.25rem;
+}
+.page .entry-title, .single .entry-title, .blog .entry-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 2em !important;
+  color: #555;
+}
+footer#colophon {
+  background-color: #eee;
+}
+
+#tribe-events-category-senior-school a {
+  color: pink;
+}

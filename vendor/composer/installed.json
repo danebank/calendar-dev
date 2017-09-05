@@ -227,5 +227,27 @@
         "type": "wordpress-plugin",
         "installation-source": "dist",
         "homepage": "https://wordpress.org/plugins/the-events-calendar/"
+    },
+    {
+        "name": "wpackagist-theme/wp-bootstrap-starter",
+        "version": "2.4.9",
+        "version_normalized": "2.4.9.0",
+        "source": {
+            "type": "svn",
+            "url": "https://themes.svn.wordpress.org/wp-bootstrap-starter/",
+            "reference": "2.4.9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://downloads.wordpress.org/theme/wp-bootstrap-starter.2.4.9.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "composer/installers": "~1.0"
+        },
+        "type": "wordpress-theme",
+        "installation-source": "dist",
+        "homepage": "https://wordpress.org/themes/wp-bootstrap-starter/"
     }
 ]
