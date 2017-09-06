@@ -12,6 +12,13 @@
  Text Domain:  wp-bootstrap-starter-child
 */
 
+/* DANEBANK COLOURS *
+* Light Green #00aab8 -> #e7fcff
+* Dark Green  #00453e -> #99cccc
+* Red         #d80927 -> #ffcccc
+* Grey        #444 ?i think?
+********************/
+
 body {
   font-family: Lato;
   font-weight: normal;
