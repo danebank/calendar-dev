@@ -16,6 +16,8 @@ define('LOGGED_IN_SALT',   $_SERVER['WP_LOGGED_IN_SALT']);
 define('NONCE_SALT',       $_SERVER['WP_NONCE_SALT']);
 define('DBI_AWS_ACCESS_KEY_ID', $_SERVER['WP_AWS_ACCESS_KEY_ID']);
 define('DBI_AWS_SECRET_ACCESS_KEY', $_SERVER['WP_AWS_SECRET_ACCESS_KEY']);
+define('WP_HOME', 		$_SERVER['WP_HOME_URL']);
+define('WP_SITEURL', 	$_SERVER['WP_SITE_URL']);
 $table_prefix  = 'wp_';
 define('WP_DEBUG', false);
 if ( !defined('ABSPATH') )
