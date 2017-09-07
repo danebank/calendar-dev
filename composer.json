@@ -15,6 +15,7 @@
         "wpackagist-plugin/amazon-s3-and-cloudfront": "*",
         "wpackagist-plugin/the-events-calendar": "*",
         "wpackagist-plugin/the-events-calendar-category-colors": "*",
-        "wpackagist-plugin/google-analytics-for-wordpress": "*"
+        "wpackagist-plugin/google-analytics-for-wordpress": "*",
+        "wpackagist-plugin/wp-updates-notifier": "*"
     }
 }

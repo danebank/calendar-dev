@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0988f0fb8c61833adfb7a209050d2fae",
+    "content-hash": "700c6e357e8626bebf301a91529e283d",
     "packages": [
         {
             "name": "composer/installers",
@@ -262,6 +262,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/the-events-calendar-category-colors/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-updates-notifier",
+            "version": "1.4.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-updates-notifier/",
+                "reference": "tags/1.4.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-updates-notifier.1.4.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-updates-notifier/"
         },
         {
             "name": "wpackagist-theme/wp-bootstrap-starter",
