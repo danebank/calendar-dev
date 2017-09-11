@@ -59,6 +59,15 @@ WP Bootstrap Starter includes support for Infinite Scroll in Jetpack.
 * Font Awesome icons, Copyright (C) Dave Gandy License: SIL Open Font License, version 1.1. - http://fontawesome.io/
 
 == Changelog ==
+= 2.5.2 - August 31, 2017 =
+* Make the subheader visible to front page
+
+= 2.5.1 - August 29, 2017 =
+* Fix style of Poppins/Lora preset
+
+= 2.5.0 - August 23, 2017 =
+* Fix the H tag format of the  Montserrat / Merriweather preset
+
 = 2.4.9 - August 3, 2017 =
 * Remove the SASS directory since it contains developer file
 

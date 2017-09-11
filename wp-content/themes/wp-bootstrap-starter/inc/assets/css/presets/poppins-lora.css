@@ -134,11 +134,16 @@ div#page-sub-header p {
     font-size: 1.5rem;
 }
 .page .entry-title, .single .entry-title, .blog .entry-title {
-    font-size: 48px;
-    font-size: 3rem;
+    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 700;
     letter-spacing: -3px;
 }
+.page h1.entry-title, .single h1.entry-title, .blog h1.entry-title {
+    font-size: 48px;
+    font-size: 3rem;
+}
+
 
 #secondary .widget-title {
     font-family: "Poppins",sans-serif;
