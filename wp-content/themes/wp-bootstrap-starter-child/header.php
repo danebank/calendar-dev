@@ -26,7 +26,7 @@
 	<header id="masthead" class="site-header navbar-static-top" role="banner">
 		<div class="container header">
 			<div class="header-image">
-				<h1 class="text-right hidden-xs"><?php echo esc_attr( get_bloginfo( 'name' ) ); ?></h1>
+				<a href="<?php echo site_url(); ?>"><h1 class="text-right hidden-xs"><?php echo esc_attr( get_bloginfo( 'name' ) ); ?></h1></a>
 			</div>
 		</div>
 		<div class="container">
