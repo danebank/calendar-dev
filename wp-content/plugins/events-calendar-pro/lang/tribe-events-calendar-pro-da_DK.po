@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Events Calendar Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-01-27 16:28:00+0000\n"
+"PO-Revision-Date: 2017-09-04 19:37:56+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,9 +11,13 @@ msgstr ""
 "Language: da_DK\n"
 "Project-Id-Version: Events Calendar Pro\n"
 
+#: src/admin-views/event-recurrence.php:273
+msgid "Recurring Events Active"
+msgstr ""
+
 #: src/admin-views/widget-calendar.php:8
 msgid "Number of events to list below the mini calendar:"
-msgstr ""
+msgstr "Antal begivenheder til liste under minikalenderen"
 
 #: src/admin-views/widget-admin-venue.php:37
 msgid "Hide this widget if there are no upcoming events"
@@ -22,7 +26,7 @@ msgstr ""
 #: src/Tribe/Main.php:1344
 msgctxt "Event title map marker prefix"
 msgid "%s: "
-msgstr ""
+msgstr "%s: "
 
 #: src/admin-views/widget-admin-advanced-list.php:127
 msgctxt "events list widget setting"
@@ -31,24 +35,24 @@ msgstr ""
 
 #: src/admin-views/recurrence/years.php:63
 msgid "the same day"
-msgstr ""
+msgstr "samme dag"
 
 #: src/admin-views/recurrence/years.php:37
 msgid "Which month will the event recur in?"
-msgstr ""
+msgstr "I hvilken måned forgår begivenheden?"
 
 #: src/admin-views/recurrence/years.php:36
 msgctxt "Begins the line indicating on which month the event will occur"
 msgid "in"
-msgstr ""
+msgstr "i"
 
 #: src/admin-views/recurrence/years.php:30
 msgid "years"
-msgstr ""
+msgstr "år"
 
 #: src/admin-views/recurrence/years.php:27
 msgid "year"
-msgstr ""
+msgstr "år"
 
 #: src/admin-views/recurrence/weeks.php:7
 msgctxt "Begins the line indicating what day of the week the event will occur on"
@@ -67,7 +71,7 @@ msgstr ""
 #: src/admin-views/recurrence/time.php:57
 msgctxt "custom recurrence time separator"
 msgid "to"
-msgstr ""
+msgstr "til"
 
 #: src/admin-views/recurrence/time.php:30
 msgctxt "number suffix for numbers ending in something other than 1, 2, or 3"
@@ -91,12 +95,12 @@ msgstr ""
 
 #: src/admin-views/recurrence/time.php:12
 msgid "next day"
-msgstr ""
+msgstr "næste dag"
 
 #: src/admin-views/recurrence/time.php:10
 #: src/admin-views/recurrence/time.php:84
 msgid "same day"
-msgstr ""
+msgstr "samme day"
 
 #: src/admin-views/recurrence/months.php:99
 #: src/admin-views/recurrence/years.php:145
@@ -124,92 +128,92 @@ msgstr ""
 #: src/admin-views/recurrence/years.php:82
 msgctxt "Qualifying the \"different day\". Example: \"day\" in \"day 12 of the month\""
 msgid "day"
-msgstr ""
+msgstr "dag"
 
 #: src/admin-views/recurrence/months.php:12
 #: src/admin-views/recurrence/years.php:64
 msgid "a different day:"
-msgstr ""
+msgstr "en anden dag:"
 
 #: src/admin-views/recurrence/months.php:11
 msgid "the same day:"
-msgstr ""
+msgstr "samme dag:"
 
-#: src/admin-views/event-recurrence.php:479
+#: src/admin-views/event-recurrence.php:495
 msgid "Recurrence Description"
 msgstr ""
 
-#: src/admin-views/event-recurrence.php:276
+#: src/admin-views/event-recurrence.php:292
 msgid "Event will not occur:"
 msgstr ""
 
-#: src/admin-views/event-recurrence.php:263
+#: src/admin-views/event-recurrence.php:264
 msgid "Add more events"
-msgstr ""
+msgstr "Tilføj flere begivenheder"
 
-#: src/admin-views/event-recurrence.php:260
+#: src/admin-views/event-recurrence.php:261
 msgid "Schedule multiple events"
 msgstr ""
 
 #: src/admin-views/event-recurrence.php:252
-#: src/admin-views/event-recurrence.php:466
+#: src/admin-views/event-recurrence.php:482
 msgid "Hide Details"
-msgstr ""
+msgstr "Skjul Detaljer"
 
 #: src/admin-views/event-recurrence.php:251
-#: src/admin-views/event-recurrence.php:465
+#: src/admin-views/event-recurrence.php:481
 msgid "Show Details"
-msgstr ""
+msgstr "Hvis Deltajer"
 
 #: src/admin-views/event-recurrence.php:223
 msgid "Series ends on this date"
-msgstr ""
+msgstr "Serien slutter på denne dato"
 
 #: src/admin-views/event-recurrence.php:204
-#: src/admin-views/event-recurrence.php:407
+#: src/admin-views/event-recurrence.php:423
 msgid "on"
-msgstr ""
+msgstr "på"
 
 #: src/admin-views/event-recurrence.php:195
-#: src/admin-views/event-recurrence.php:397
+#: src/admin-views/event-recurrence.php:413
 msgid "Series ends"
-msgstr ""
+msgstr "Serien slutter"
 
 #: src/admin-views/event-recurrence.php:167
 msgid "a different time:"
-msgstr ""
+msgstr "et andet tidspunkt:"
 
 #: src/admin-views/event-recurrence.php:166
 msgid "the same time:"
-msgstr ""
+msgstr "samme tidspunkt:"
 
 #: src/admin-views/event-recurrence.php:156
 msgctxt "Begins the line indicating when a recurrence time starts"
 msgid "At"
-msgstr ""
+msgstr "På"
 
 #: src/admin-views/event-recurrence.php:115
-#: src/admin-views/event-recurrence.php:351
+#: src/admin-views/event-recurrence.php:367
 msgid "months"
-msgstr ""
+msgstr "måneder"
 
 #: src/admin-views/event-recurrence.php:112
-#: src/admin-views/event-recurrence.php:348
+#: src/admin-views/event-recurrence.php:364
 msgid "month"
 msgstr "måned"
 
 #: src/admin-views/event-recurrence.php:107
-#: src/admin-views/event-recurrence.php:343
+#: src/admin-views/event-recurrence.php:359
 msgid "weeks"
-msgstr ""
+msgstr "uger"
 
 #: src/admin-views/event-recurrence.php:42
 msgid "Delete This"
-msgstr ""
+msgstr "Slet Dette"
 
 #: src/admin-views/event-recurrence.php:13
 msgid "Event Series:"
-msgstr ""
+msgstr "Begivenhedsserier:"
 
 #: src/admin-views/event-recurrence.php:27
 msgid "Are you sure you want to delete this exclusion?"
@@ -217,7 +221,7 @@ msgstr ""
 
 #: src/admin-views/event-recurrence.php:26
 msgid "Are you sure you want to delete these events?"
-msgstr ""
+msgstr "Er du sikker på, at du vil slette disse begivenheder?"
 
 #: src/Tribe/Recurrence/Validator.php:146
 msgid "Yearly custom recurrences with a different day must have either a date or day specified."
@@ -613,119 +617,119 @@ msgstr ""
 
 #: src/Tribe/Recurrence/Strings.php:45
 msgid "the 31st day of the month"
-msgstr ""
+msgstr "den 31. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:44
 msgid "the 30th day of the month"
-msgstr ""
+msgstr "den 30. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:43
 msgid "the 29th day of the month"
-msgstr ""
+msgstr "den 29. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:42
 msgid "the 28th day of the month"
-msgstr ""
+msgstr "den 28. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:41
 msgid "the 27th day of the month"
-msgstr ""
+msgstr "den 27. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:40
 msgid "the 26th day of the month"
-msgstr ""
+msgstr "den 26. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:39
 msgid "the 25th day of the month"
-msgstr ""
+msgstr "den 25. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:38
 msgid "the 24th day of the month"
-msgstr ""
+msgstr "den 24. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:37
 msgid "the 23rd day of the month"
-msgstr ""
+msgstr "den 23. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:36
 msgid "the 22nd day of the month"
-msgstr ""
+msgstr "den 22. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:35
 msgid "the 21st day of the month"
-msgstr ""
+msgstr "den 21. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:34
 msgid "the 20th day of the month"
-msgstr ""
+msgstr "den 20. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:33
 msgid "the 19th day of the month"
-msgstr ""
+msgstr "den 19. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:32
 msgid "the 18th day of the month"
-msgstr ""
+msgstr "den 18. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:31
 msgid "the 17th day of the month"
-msgstr ""
+msgstr "den 17. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:30
 msgid "the 16th day of the month"
-msgstr ""
+msgstr "den 16. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:29
 msgid "the 15th day of the month"
-msgstr ""
+msgstr "den 15. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:28
 msgid "the 14th day of the month"
-msgstr ""
+msgstr "den 14. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:27
 msgid "the 13th day of the month"
-msgstr ""
+msgstr "den 13. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:26
 msgid "the 12th day of the month"
-msgstr ""
+msgstr "den 12. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:25
 msgid "the 11th day of the month"
-msgstr ""
+msgstr "den 11. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:24
 msgid "the 10th day of the month"
-msgstr ""
+msgstr "den 10. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:23
 msgid "the 9th day of the month"
-msgstr ""
+msgstr "den 9. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:22
 msgid "the 8th day of the month"
-msgstr ""
+msgstr "den 8. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:21
 msgid "the 7th day of the month"
-msgstr ""
+msgstr "den 7. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:20
 msgid "the 6th day of the month"
-msgstr ""
+msgstr "den 6. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:19
 msgid "the 5th day of the month"
-msgstr ""
+msgstr "den 5. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:18
 msgid "the 4th day of the month"
-msgstr ""
+msgstr "den 4. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:17
 msgid "the 3rd day of the month"
-msgstr ""
+msgstr "den 3. dag i måneden"
 
 #: src/Tribe/Recurrence/Strings.php:16
 msgid "the 2nd day of the month"
@@ -750,7 +754,7 @@ msgstr ""
 
 #: src/views/pro/list/venue-nav.php:42
 msgid "Next %s"
-msgstr ""
+msgstr "Næste %s"
 
 #: src/views/pro/list/venue-nav.php:34
 msgid "Previous %s"
@@ -792,7 +796,7 @@ msgstr ""
 
 #: src/Tribe/Main.php:72
 msgid "all"
-msgstr ""
+msgstr "alle"
 
 #: src/Tribe/Main.php:560
 msgctxt "debug recurrence"
@@ -935,7 +939,7 @@ msgstr ""
 msgid "If fields are left empty when they're submitted, automatically fill them in with these values."
 msgstr ""
 
-#: src/admin-views/event-recurrence.php:482
+#: src/admin-views/event-recurrence.php:498
 msgid "Use this field if you want to override the auto-generated descriptions of event recurrence"
 msgstr ""
 
@@ -1024,12 +1028,12 @@ msgstr ""
 msgid "View all %1$s at this %2$s"
 msgstr "Vis alle %1$s for denne %2$s"
 
-#: src/admin-views/event-recurrence.php:472
+#: src/admin-views/event-recurrence.php:488
 msgid "Add Exclusion"
 msgstr "Tilføj undtagelse"
 
 #: src/admin-views/event-recurrence.php:63
-#: src/admin-views/event-recurrence.php:301
+#: src/admin-views/event-recurrence.php:317
 msgid "Once"
 msgstr "Kun én gang"
 
@@ -1141,7 +1145,7 @@ msgid "hours"
 msgstr "timer"
 
 #: src/admin-views/event-recurrence.php:99
-#: src/admin-views/event-recurrence.php:335
+#: src/admin-views/event-recurrence.php:351
 #: src/views/pro/widgets/countdown-widget.php:20
 msgid "days"
 msgstr "dage"
@@ -1267,7 +1271,7 @@ msgstr "Fuld tekst til nedtælling:"
 
 #: src/admin-views/widget-admin-countdown.php:45
 msgid "Show seconds?"
-msgstr ""
+msgstr "Vis sekunder?"
 
 #: src/admin-views/widget-admin-countdown.php:28
 msgid "Event:"
@@ -1433,88 +1437,88 @@ msgstr "Vælg en stat"
 msgid "No Default"
 msgstr "Ingen standard"
 
-#: src/admin-views/event-recurrence.php:477
+#: src/admin-views/event-recurrence.php:493
 msgid "Recurrence Description:"
 msgstr "Gentagelse tekst:"
 
 #: src/admin-views/recurrence/months.php:59
 #: src/admin-views/recurrence/years.php:105
 msgid "fifth"
-msgstr ""
+msgstr "femte"
 
 #: src/admin-views/recurrence/months.php:58
 #: src/admin-views/recurrence/years.php:104
 msgid "fourth"
-msgstr ""
+msgstr "fjerde"
 
 #: src/admin-views/recurrence/months.php:57
 #: src/admin-views/recurrence/years.php:103
 msgid "third"
-msgstr ""
+msgstr "tredje"
 
 #: src/admin-views/recurrence/months.php:56
 #: src/admin-views/recurrence/years.php:102
 msgid "second"
-msgstr ""
+msgstr "anden"
 
 #: src/admin-views/recurrence/months.php:55
 #: src/admin-views/recurrence/years.php:101
 msgid "first"
-msgstr ""
+msgstr "første"
 
-#: src/admin-views/event-recurrence.php:452
+#: src/admin-views/event-recurrence.php:468
 msgid "Frequency of recurring event must be a number"
 msgstr "Indtast venligst et nummer for antallet af gentagelser"
 
 #: src/admin-views/event-recurrence.php:81
-#: src/admin-views/event-recurrence.php:318
+#: src/admin-views/event-recurrence.php:334
 #: src/admin-views/recurrence/years.php:12
 msgid "Every"
 msgstr "Samtlige"
 
 #: src/admin-views/event-recurrence.php:62
-#: src/admin-views/event-recurrence.php:300
+#: src/admin-views/event-recurrence.php:316
 msgid "Yearly"
 msgstr "Årligt"
 
 #: src/admin-views/event-recurrence.php:61
-#: src/admin-views/event-recurrence.php:299
+#: src/admin-views/event-recurrence.php:315
 msgid "Monthly"
 msgstr "Månedligt"
 
 #: src/admin-views/event-recurrence.php:60
-#: src/admin-views/event-recurrence.php:298
+#: src/admin-views/event-recurrence.php:314
 msgid "Weekly"
 msgstr "Ugentligt"
 
 #: src/admin-views/event-recurrence.php:59
-#: src/admin-views/event-recurrence.php:297
+#: src/admin-views/event-recurrence.php:313
 msgid "Daily"
 msgstr "Dagligt"
 
 #: src/admin-views/event-recurrence.php:242
-#: src/admin-views/event-recurrence.php:444
+#: src/admin-views/event-recurrence.php:460
 msgid "You must select a recurrence end date"
 msgstr "Vælg en slutdato for gentagelserne"
 
 #: src/admin-views/event-recurrence.php:239
-#: src/admin-views/event-recurrence.php:441
+#: src/admin-views/event-recurrence.php:457
 msgctxt "occurence count text"
 msgid "events"
 msgstr "begivenheder"
 
 #: src/admin-views/event-recurrence.php:206
-#: src/admin-views/event-recurrence.php:409
+#: src/admin-views/event-recurrence.php:425
 msgid "never"
-msgstr ""
+msgstr "adrig"
 
 #: src/admin-views/event-recurrence.php:205
-#: src/admin-views/event-recurrence.php:408
+#: src/admin-views/event-recurrence.php:424
 msgid "after"
-msgstr ""
+msgstr "efter"
 
 #: src/admin-views/event-recurrence.php:68
-#: src/admin-views/event-recurrence.php:306
+#: src/admin-views/event-recurrence.php:322
 #: src/admin-views/recurrence/months.php:2
 #: src/admin-views/recurrence/years.php:53
 msgid "On"
@@ -1525,12 +1529,12 @@ msgid "None"
 msgstr "Ingen"
 
 #: src/admin-views/event-recurrence.php:56
-#: src/admin-views/event-recurrence.php:294
+#: src/admin-views/event-recurrence.php:310
 msgid "events"
 msgstr "begivenheder"
 
 #: src/admin-views/event-recurrence.php:55
-#: src/admin-views/event-recurrence.php:293
+#: src/admin-views/event-recurrence.php:309
 msgid "event"
 msgstr "begivenhed"
 
@@ -1708,7 +1712,7 @@ msgstr ""
 
 #: src/Tribe/Recurrence/Meta.php:126
 msgid "%d instances of this event have been created through %s. <a href=\"%s\" target=\"_blank\">Learn more.</a>"
-msgstr ""
+msgstr "%d antal af denne begivenhed er oprettet gennem %s. <a href=\"%s\" target=\"_blank\">Læs mere.</a>"
 
 #: src/Tribe/Recurrence/Meta.php:103
 msgid "You are currently editing all events in a recurring series."
@@ -1878,8 +1882,8 @@ msgstr "vare"
 
 #: src/admin-views/event-recurrence.php:59
 #: src/admin-views/event-recurrence.php:96
-#: src/admin-views/event-recurrence.php:297
-#: src/admin-views/event-recurrence.php:332
+#: src/admin-views/event-recurrence.php:313
+#: src/admin-views/event-recurrence.php:348
 #: src/admin-views/recurrence/months.php:90
 #: src/admin-views/recurrence/years.php:136
 msgid "day"
@@ -2135,7 +2139,7 @@ msgid "photo"
 msgstr "billede"
 
 #: src/Tribe/Main.php:73 src/admin-views/event-recurrence.php:104
-#: src/admin-views/event-recurrence.php:340
+#: src/admin-views/event-recurrence.php:356
 msgid "week"
 msgstr "uge"
 

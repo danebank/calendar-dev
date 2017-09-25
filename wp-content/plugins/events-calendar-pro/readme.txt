@@ -5,7 +5,7 @@ Tags: events, calendar, event, venue, organizer, dates, date, google maps, confe
 Donate link: http://m.tri.be/29
 Requires at least: 4.5
 Tested up to: 4.8.1
-Stable tag: 4.4.16
+Stable tag: 4.4.17
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -202,6 +202,15 @@ Our Premium Plugins:
 * <a href="http://m.tri.be/fa" target="_blank">The Events Calendar: Filter Bar</a>
 
 == Changelog ==
+
+= [4.4.17] 2017-09-06 =
+
+* Fix - Meta building for Recurrence has a few more conditionals to prevent Fatals [80319]
+* Fix - Setup postdata in Week view so that the default template tags can be used in theme overrides (thank you ThemeFusion for recommending this!) [85600]
+* Fix - Resolved issue where the warning for tickets on recurring events sometimes failed to display [87201]
+* Tweak - A hidden input that detects if the event is recurring [81726]
+* Tweak - Changed views: `pro/week/single-event.php`
+* Language - 1 new strings added, 31 updated, 0 fuzzied, and 0 obsoleted
 
 = [4.4.16] 2017-08-24 =
 

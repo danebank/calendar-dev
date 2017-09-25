@@ -238,6 +238,7 @@ if ( ! class_exists( 'Tribe__Events__Pro__Templates__Week' ) ) {
 		 */
 		public function set_global_post( $slug, $name, $data ) {
 			$GLOBALS['post'] = $data['event'];
+			setup_postdata( $data['event'] );
 		}
 
 

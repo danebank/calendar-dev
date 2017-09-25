@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Events Calendar Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-03-23 00:14:28+0000\n"
+"PO-Revision-Date: 2017-09-04 19:37:22+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,31 +11,35 @@ msgstr ""
 "Language: bg\n"
 "Project-Id-Version: Events Calendar Pro\n"
 
+#: src/admin-views/event-recurrence.php:273
+msgid "Recurring Events Active"
+msgstr ""
+
 #: src/admin-views/widget-calendar.php:8
 msgid "Number of events to list below the mini calendar:"
-msgstr ""
+msgstr "Брой събития, който да се показват под мини календара:"
 
 #: src/admin-views/widget-admin-venue.php:37
 msgid "Hide this widget if there are no upcoming events"
-msgstr ""
+msgstr "Скриване на джаджата ако няма предстоящи събития"
 
 #: src/Tribe/Main.php:1344
 msgctxt "Event title map marker prefix"
 msgid "%s: "
-msgstr ""
+msgstr "%s: "
 
 #: src/admin-views/widget-admin-advanced-list.php:127
 msgctxt "events list widget setting"
 msgid "Limit to featured events only"
-msgstr ""
+msgstr "Ограничи само до бъдещи събития"
 
 #: src/admin-views/recurrence/years.php:63
 msgid "the same day"
-msgstr "на същия ден"
+msgstr "същия ден"
 
 #: src/admin-views/recurrence/years.php:37
 msgid "Which month will the event recur in?"
-msgstr "През кой ще се повтори събитието?"
+msgstr "Кой месец ще се повтори събитието?"
 
 #: src/admin-views/recurrence/years.php:36
 msgctxt "Begins the line indicating on which month the event will occur"
@@ -72,22 +76,22 @@ msgstr "до"
 #: src/admin-views/recurrence/time.php:30
 msgctxt "number suffix for numbers ending in something other than 1, 2, or 3"
 msgid "%1$sth day"
-msgstr ""
+msgstr "%1$sми ден"
 
 #: src/admin-views/recurrence/time.php:25
 msgctxt "number suffix for numbers ending in 3"
 msgid "%1$srd day"
-msgstr ""
+msgstr "%1$sти ден"
 
 #: src/admin-views/recurrence/time.php:20
 msgctxt "number suffix for numbers ending in 2"
 msgid "%1$snd day"
-msgstr ""
+msgstr "%1$sри ден"
 
 #: src/admin-views/recurrence/time.php:15
 msgctxt "number suffix for numbers ending in 1"
 msgid "%1$sst day"
-msgstr ""
+msgstr "%1$sви ден"
 
 #: src/admin-views/recurrence/time.php:12
 msgid "next day"
@@ -118,7 +122,7 @@ msgstr "Използвай пример:"
 #: src/admin-views/recurrence/years.php:89
 msgctxt "Qualifying the \"different day\". Example: \"the\" in \"the first Friday\""
 msgid "the"
-msgstr ""
+msgstr " "
 
 #: src/admin-views/recurrence/months.php:30
 #: src/admin-views/recurrence/years.php:82
@@ -135,29 +139,29 @@ msgstr "друг ден:"
 msgid "the same day:"
 msgstr "на същия ден:"
 
-#: src/admin-views/event-recurrence.php:479
+#: src/admin-views/event-recurrence.php:495
 msgid "Recurrence Description"
 msgstr "Recurrence Description"
 
-#: src/admin-views/event-recurrence.php:276
+#: src/admin-views/event-recurrence.php:292
 msgid "Event will not occur:"
 msgstr "Събитието няма да се състои:"
 
-#: src/admin-views/event-recurrence.php:263
+#: src/admin-views/event-recurrence.php:264
 msgid "Add more events"
 msgstr "Добави повече събития"
 
-#: src/admin-views/event-recurrence.php:260
+#: src/admin-views/event-recurrence.php:261
 msgid "Schedule multiple events"
 msgstr "Планирай няколко събития"
 
 #: src/admin-views/event-recurrence.php:252
-#: src/admin-views/event-recurrence.php:466
+#: src/admin-views/event-recurrence.php:482
 msgid "Hide Details"
 msgstr "Скрий детайли"
 
 #: src/admin-views/event-recurrence.php:251
-#: src/admin-views/event-recurrence.php:465
+#: src/admin-views/event-recurrence.php:481
 msgid "Show Details"
 msgstr "Покажи детайли"
 
@@ -166,12 +170,12 @@ msgid "Series ends on this date"
 msgstr "Сериите свършват на тази дата"
 
 #: src/admin-views/event-recurrence.php:204
-#: src/admin-views/event-recurrence.php:407
+#: src/admin-views/event-recurrence.php:423
 msgid "on"
 msgstr "на"
 
 #: src/admin-views/event-recurrence.php:195
-#: src/admin-views/event-recurrence.php:397
+#: src/admin-views/event-recurrence.php:413
 msgid "Series ends"
 msgstr "Сериите свършват"
 
@@ -189,17 +193,17 @@ msgid "At"
 msgstr "В"
 
 #: src/admin-views/event-recurrence.php:115
-#: src/admin-views/event-recurrence.php:351
+#: src/admin-views/event-recurrence.php:367
 msgid "months"
 msgstr "месеци"
 
 #: src/admin-views/event-recurrence.php:112
-#: src/admin-views/event-recurrence.php:348
+#: src/admin-views/event-recurrence.php:364
 msgid "month"
 msgstr "месец"
 
 #: src/admin-views/event-recurrence.php:107
-#: src/admin-views/event-recurrence.php:343
+#: src/admin-views/event-recurrence.php:359
 msgid "weeks"
 msgstr "седмици"
 
@@ -221,7 +225,7 @@ msgstr "Сигурни ли сте, че искате да изтриете то
 
 #: src/Tribe/Recurrence/Validator.php:146
 msgid "Yearly custom recurrences with a different day must have either a date or day specified."
-msgstr ""
+msgstr "Ежегодни събития с избираема повтаряемост, които се случват в различни дни трябва да имат избрана дата или ден."
 
 #: src/Tribe/Recurrence/Strings.php:182
 msgid "Cancel"
@@ -513,59 +517,59 @@ msgstr ""
 
 #: src/Tribe/Recurrence/Strings.php:80
 msgid "A multi-day event every [interval] week(s) starting on [days_of_week] at [start_time], repeating until [series_end_date]"
-msgstr ""
+msgstr "Многодневно събитие през [interval] седмица(и), започващо в(ъв) [days_of_week] в [start_time], повтарящо се до [series_end_date]"
 
 #: src/Tribe/Recurrence/Strings.php:79
 msgid "A multi-day event every [interval] week(s) starting on [days_of_week], repeating until [series_end_date]"
-msgstr ""
+msgstr "Многодневно събитие през [interval] седмица(и), започващо в(ъв) [days_of_week], повтарящо се до [series_end_date]"
 
 #: src/Tribe/Recurrence/Strings.php:78
 msgid "An all day event every [interval] week(s) on [days_of_week] at [start_time], repeating until [series_end_date]"
-msgstr ""
+msgstr "Целодневно повтарящо се събитие през [interval] седмица(и) в(ъв) [days_of_week], започващо в [start_time], повтаря се до [series_end_date]"
 
 #: src/Tribe/Recurrence/Strings.php:77
 msgid "An all day event every [interval] week(s) on [days_of_week], repeating until [series_end_date]"
-msgstr ""
+msgstr "Целодневно повтарящо се събитие през [interval] седмица(и) в(ъв) [days_of_week] до [series_end_date]"
 
 #: src/Tribe/Recurrence/Strings.php:76
 msgid "An event every [interval] week(s) that begins at [start_time] on [days_of_week], repeating until [series_end_date]"
-msgstr ""
+msgstr "Повтарящо се събитие през [interval] седмица(и), което започва в [start_time] в(ъв) [days_of_week] до [series_end_date]"
 
 #: src/Tribe/Recurrence/Strings.php:73
 msgid "A multi-day event every [interval] day(s) at [start_time], repeating indefinitely"
-msgstr ""
+msgstr "Многодневно събитие на всеки [interval] ден/дни в [start_time], без край на повторението"
 
 #: src/Tribe/Recurrence/Strings.php:72
 msgid "A multi-day event every [interval] day(s), repeating indefinitely"
-msgstr ""
+msgstr "Многодневно събитие на всеки [interval] ден/дни, без край на повторението"
 
 #: src/Tribe/Recurrence/Strings.php:71
 msgid "An all day event every [interval] day(s) at [start_time], repeating indefinitely"
-msgstr ""
+msgstr "Целодневно събитие на всеки [interval] ден/дни в [start_time], без край на повторението"
 
 #: src/Tribe/Recurrence/Strings.php:70
 msgid "An all day event every [interval] day(s), repeating indefinitely"
-msgstr ""
+msgstr "Целодневно събитие на всеки [interval] ден/дни, без край на повторението"
 
 #: src/Tribe/Recurrence/Strings.php:69
 msgid "An event every [interval] day(s) that begins at [start_time], repeating indefinitely"
-msgstr ""
+msgstr "Събитие на всеки [interval] ден/дни, започващо в [start_time], без край на повторението"
 
 #: src/Tribe/Recurrence/Strings.php:66
 msgid "A multi-day event every [interval] day(s) at [start_time], happening [count] times"
-msgstr ""
+msgstr "Многодневно събитие на всеки [interval] ден/дни в [start_time], случващо се [count] път/пъти"
 
 #: src/Tribe/Recurrence/Strings.php:65
 msgid "A multi-day event every [interval] day(s), happening [count] times"
-msgstr ""
+msgstr "Многодневно събитие на всеки [interval] ден/дни, случващо се [count] път/пъти"
 
 #: src/Tribe/Recurrence/Strings.php:64
 msgid "An all day event every [interval] day(s) at [start_time], happening [count] times"
-msgstr ""
+msgstr "Целодневно събитие на всеки [interval] ден/дни в [start_time], случващо се [count] път/пъти"
 
 #: src/Tribe/Recurrence/Strings.php:63
 msgid "An all day event every [interval] day(s), happening [count] times"
-msgstr ""
+msgstr "Целодневно събитие на всеки [interval] ден/дни, случващо се [count] път/пъти"
 
 #: src/Tribe/Recurrence/Strings.php:62
 msgid "An event every [interval] day(s) that begins at [start_time], happening [count] times"
@@ -737,7 +741,7 @@ msgstr "1-ият ден от месеца"
 
 #: src/Tribe/Recurrence/Strings.php:14
 msgid "%1$s"
-msgstr ""
+msgstr "%1$s"
 
 #: src/Tribe/Recurrence/Strings.php:13
 msgid "All day"
@@ -772,15 +776,15 @@ msgstr ""
 
 #: src/admin-views/tribe-options-mobile.php:33
 msgid "Change the default view for Mobile users."
-msgstr ""
+msgstr "Промяна на избора по подразбиране за потребители на мобилни устройства."
 
 #: src/admin-views/tribe-options-mobile.php:32
 msgid "Default mobile view"
-msgstr ""
+msgstr "Мобилен изглед по подразбиране"
 
 #: src/admin-views/tribe-options-mobile.php:19
 msgid "Use Default View"
-msgstr ""
+msgstr "Използване на изглед по подразбиране"
 
 #: src/Tribe/Templates/Mods/List_View.php:16
 msgid "All %s"
@@ -788,7 +792,7 @@ msgstr "Всички %s"
 
 #: src/Tribe/Shortcodes/Tribe_Events.php:498
 msgid "$template_object is expected to be an actual object"
-msgstr ""
+msgstr "$template_object трябва да бъде реален обект"
 
 #: src/Tribe/Main.php:72
 msgid "all"
@@ -826,11 +830,11 @@ msgstr "Грешка в геокода ($1%s - $2%s)"
 
 #: src/Tribe/CSV_Importer/Fields.php:26
 msgid "Venue Longitude"
-msgstr ""
+msgstr "Географска дължина на обекта (Longitude)"
 
 #: src/Tribe/CSV_Importer/Fields.php:25
 msgid "Venue Latitude"
-msgstr ""
+msgstr "Географска ширина на обекта (Latitude)"
 
 #: src/Tribe/Recurrence/Validator.php:164
 msgid "Recurrence meta should not be empty."
@@ -935,7 +939,7 @@ msgstr "Тип:"
 msgid "If fields are left empty when they're submitted, automatically fill them in with these values."
 msgstr "Ако полетата са оставени празни, автоматично да се попълват с тези стойности."
 
-#: src/admin-views/event-recurrence.php:482
+#: src/admin-views/event-recurrence.php:498
 msgid "Use this field if you want to override the auto-generated descriptions of event recurrence"
 msgstr "Използвайте това поле ако искате да презапишете автоматично генерираните описания за повтаряемост на събитието"
 
@@ -1024,12 +1028,12 @@ msgstr "The Events Calendar PRO"
 msgid "View all %1$s at this %2$s"
 msgstr "Виж всички %1$s в това %2$s"
 
-#: src/admin-views/event-recurrence.php:472
+#: src/admin-views/event-recurrence.php:488
 msgid "Add Exclusion"
 msgstr "Добави изключение"
 
 #: src/admin-views/event-recurrence.php:63
-#: src/admin-views/event-recurrence.php:301
+#: src/admin-views/event-recurrence.php:317
 msgid "Once"
 msgstr "Веднъж"
 
@@ -1141,7 +1145,7 @@ msgid "hours"
 msgstr "часа"
 
 #: src/admin-views/event-recurrence.php:99
-#: src/admin-views/event-recurrence.php:335
+#: src/admin-views/event-recurrence.php:351
 #: src/views/pro/widgets/countdown-widget.php:20
 msgid "days"
 msgstr "дни"
@@ -1433,7 +1437,7 @@ msgstr "Избор на щат"
 msgid "No Default"
 msgstr "Няма стойност по подразбиране"
 
-#: src/admin-views/event-recurrence.php:477
+#: src/admin-views/event-recurrence.php:493
 msgid "Recurrence Description:"
 msgstr "Обяснение на повтаряемостта:"
 
@@ -1462,59 +1466,59 @@ msgstr "Втори(а)"
 msgid "first"
 msgstr "Първи(а)"
 
-#: src/admin-views/event-recurrence.php:452
+#: src/admin-views/event-recurrence.php:468
 msgid "Frequency of recurring event must be a number"
 msgstr "Честотата на повтаряне на събитията трябва да бъде число"
 
 #: src/admin-views/event-recurrence.php:81
-#: src/admin-views/event-recurrence.php:318
+#: src/admin-views/event-recurrence.php:334
 #: src/admin-views/recurrence/years.php:12
 msgid "Every"
 msgstr "Всеки"
 
 #: src/admin-views/event-recurrence.php:62
-#: src/admin-views/event-recurrence.php:300
+#: src/admin-views/event-recurrence.php:316
 msgid "Yearly"
 msgstr "Годишно"
 
 #: src/admin-views/event-recurrence.php:61
-#: src/admin-views/event-recurrence.php:299
+#: src/admin-views/event-recurrence.php:315
 msgid "Monthly"
 msgstr "Месечно"
 
 #: src/admin-views/event-recurrence.php:60
-#: src/admin-views/event-recurrence.php:298
+#: src/admin-views/event-recurrence.php:314
 msgid "Weekly"
 msgstr "Седмично"
 
 #: src/admin-views/event-recurrence.php:59
-#: src/admin-views/event-recurrence.php:297
+#: src/admin-views/event-recurrence.php:313
 msgid "Daily"
 msgstr "Дневно"
 
 #: src/admin-views/event-recurrence.php:242
-#: src/admin-views/event-recurrence.php:444
+#: src/admin-views/event-recurrence.php:460
 msgid "You must select a recurrence end date"
 msgstr "Трябва да изберете край на повтаряемостта"
 
 #: src/admin-views/event-recurrence.php:239
-#: src/admin-views/event-recurrence.php:441
+#: src/admin-views/event-recurrence.php:457
 msgctxt "occurence count text"
 msgid "events"
 msgstr "събития"
 
 #: src/admin-views/event-recurrence.php:206
-#: src/admin-views/event-recurrence.php:409
+#: src/admin-views/event-recurrence.php:425
 msgid "never"
 msgstr "Никога"
 
 #: src/admin-views/event-recurrence.php:205
-#: src/admin-views/event-recurrence.php:408
+#: src/admin-views/event-recurrence.php:424
 msgid "after"
 msgstr "След"
 
 #: src/admin-views/event-recurrence.php:68
-#: src/admin-views/event-recurrence.php:306
+#: src/admin-views/event-recurrence.php:322
 #: src/admin-views/recurrence/months.php:2
 #: src/admin-views/recurrence/years.php:53
 msgid "On"
@@ -1525,12 +1529,12 @@ msgid "None"
 msgstr "Няма"
 
 #: src/admin-views/event-recurrence.php:56
-#: src/admin-views/event-recurrence.php:294
+#: src/admin-views/event-recurrence.php:310
 msgid "events"
 msgstr "събития"
 
 #: src/admin-views/event-recurrence.php:55
-#: src/admin-views/event-recurrence.php:293
+#: src/admin-views/event-recurrence.php:309
 msgid "event"
 msgstr "събитие"
 
@@ -1878,8 +1882,8 @@ msgstr "последно"
 
 #: src/admin-views/event-recurrence.php:59
 #: src/admin-views/event-recurrence.php:96
-#: src/admin-views/event-recurrence.php:297
-#: src/admin-views/event-recurrence.php:332
+#: src/admin-views/event-recurrence.php:313
+#: src/admin-views/event-recurrence.php:348
 #: src/admin-views/recurrence/months.php:90
 #: src/admin-views/recurrence/years.php:136
 msgid "day"
@@ -2135,7 +2139,7 @@ msgid "photo"
 msgstr "снимка"
 
 #: src/Tribe/Main.php:73 src/admin-views/event-recurrence.php:104
-#: src/admin-views/event-recurrence.php:340
+#: src/admin-views/event-recurrence.php:356
 msgid "week"
 msgstr "week"
 
