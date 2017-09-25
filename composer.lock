@@ -165,15 +165,15 @@
         },
         {
             "name": "wpackagist-plugin/google-analytics-for-wordpress",
-            "version": "6.2.2",
+            "version": "6.2.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/google-analytics-for-wordpress/",
-                "reference": "tags/6.2.2"
+                "reference": "tags/6.2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.6.2.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.6.2.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -225,15 +225,15 @@
         },
         {
             "name": "wpackagist-plugin/the-events-calendar",
-            "version": "4.5.12",
+            "version": "4.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/the-events-calendar/",
-                "reference": "tags/4.5.12"
+                "reference": "tags/4.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/the-events-calendar.4.5.12.zip",
+                "url": "https://downloads.wordpress.org/plugin/the-events-calendar.4.6.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -285,15 +285,15 @@
         },
         {
             "name": "wpackagist-theme/wp-bootstrap-starter",
-            "version": "2.4.9",
+            "version": "2.5.2",
             "source": {
                 "type": "svn",
                 "url": "https://themes.svn.wordpress.org/wp-bootstrap-starter/",
-                "reference": "2.4.9"
+                "reference": "2.5.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/wp-bootstrap-starter.2.4.9.zip",
+                "url": "https://downloads.wordpress.org/theme/wp-bootstrap-starter.2.5.2.zip",
                 "reference": null,
                 "shasum": null
             },
