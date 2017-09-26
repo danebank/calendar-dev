@@ -8,7 +8,8 @@
         }
     ],
     "require": {
-        "wpackagist-theme/wp-bootstrap-starter": "*",
+        "wpackagist-plugin/akismet": "*",
+	"wpackagist-theme/wp-bootstrap-starter": "*",
         "wpackagist-plugin/pagerestrict":"*",
         "wpackagist-plugin/my-wp-health-check":"*",
         "wpackagist-plugin/amazon-web-services": "*",

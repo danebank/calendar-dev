@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "700c6e357e8626bebf301a91529e283d",
+    "content-hash": "f3e529eaecdc4d12094caf5268167f2d",
     "packages": [
         {
             "name": "composer/installers",
@@ -122,6 +122,26 @@
                 "zikula"
             ],
             "time": "2017-08-09T07:53:48+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/akismet",
+            "version": "4.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/akismet/",
+                "reference": "tags/4.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/akismet.4.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/akismet/"
         },
         {
             "name": "wpackagist-plugin/amazon-s3-and-cloudfront",
