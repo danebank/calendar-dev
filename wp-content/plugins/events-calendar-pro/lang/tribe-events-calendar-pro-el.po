@@ -11,7 +11,15 @@ msgstr ""
 "Language: el_GR\n"
 "Project-Id-Version: Events Calendar Pro\n"
 
-#: src/admin-views/event-recurrence.php:273
+#: src/Tribe/Recurrence/Series_Rules_Factory.php:27
+msgid "Expected an array but received a variable of type '%s'"
+msgstr ""
+
+#: src/Tribe/Geo_Loc.php:273
+msgid "Venue Overwrite Coordinates"
+msgstr ""
+
+#: src/admin-views/event-recurrence.php:275
 msgid "Recurring Events Active"
 msgstr ""
 
@@ -139,11 +147,11 @@ msgstr ""
 msgid "the same day:"
 msgstr ""
 
-#: src/admin-views/event-recurrence.php:495
+#: src/admin-views/event-recurrence.php:500
 msgid "Recurrence Description"
 msgstr ""
 
-#: src/admin-views/event-recurrence.php:292
+#: src/admin-views/event-recurrence.php:297
 msgid "Event will not occur:"
 msgstr ""
 
@@ -156,12 +164,12 @@ msgid "Schedule multiple events"
 msgstr ""
 
 #: src/admin-views/event-recurrence.php:252
-#: src/admin-views/event-recurrence.php:482
+#: src/admin-views/event-recurrence.php:487
 msgid "Hide Details"
 msgstr ""
 
 #: src/admin-views/event-recurrence.php:251
-#: src/admin-views/event-recurrence.php:481
+#: src/admin-views/event-recurrence.php:486
 msgid "Show Details"
 msgstr ""
 
@@ -170,12 +178,12 @@ msgid "Series ends on this date"
 msgstr ""
 
 #: src/admin-views/event-recurrence.php:204
-#: src/admin-views/event-recurrence.php:423
+#: src/admin-views/event-recurrence.php:428
 msgid "on"
 msgstr ""
 
 #: src/admin-views/event-recurrence.php:195
-#: src/admin-views/event-recurrence.php:413
+#: src/admin-views/event-recurrence.php:418
 msgid "Series ends"
 msgstr ""
 
@@ -193,17 +201,17 @@ msgid "At"
 msgstr ""
 
 #: src/admin-views/event-recurrence.php:115
-#: src/admin-views/event-recurrence.php:367
+#: src/admin-views/event-recurrence.php:372
 msgid "months"
 msgstr ""
 
 #: src/admin-views/event-recurrence.php:112
-#: src/admin-views/event-recurrence.php:364
+#: src/admin-views/event-recurrence.php:369
 msgid "month"
 msgstr "month"
 
 #: src/admin-views/event-recurrence.php:107
-#: src/admin-views/event-recurrence.php:359
+#: src/admin-views/event-recurrence.php:364
 msgid "weeks"
 msgstr ""
 
@@ -747,7 +755,7 @@ msgstr ""
 msgid "All day"
 msgstr ""
 
-#: src/Tribe/Recurrence/Meta.php:1252
+#: src/Tribe/Recurrence/Meta.php:1253
 msgctxt "placeholder used where the true day of the day is determined dynamically"
 msgid "day"
 msgstr ""
@@ -818,12 +826,12 @@ msgctxt "debug recurrence"
 msgid "Unknown"
 msgstr ""
 
-#: src/Tribe/Geo_Loc.php:496
+#: src/Tribe/Geo_Loc.php:531
 msgctxt "debug geodata"
 msgid "empty response"
 msgstr ""
 
-#: src/Tribe/Geo_Loc.php:495
+#: src/Tribe/Geo_Loc.php:530
 msgctxt "debug geodata"
 msgid "Geocode request failed ($1%s - $2%s)"
 msgstr ""
@@ -852,11 +860,11 @@ msgstr ""
 msgid "Events Calendar PRO"
 msgstr ""
 
-#: src/Tribe/Geo_Loc.php:547
+#: src/Tribe/Geo_Loc.php:582
 msgid "The latitude and longitude for your venue could not be fetched. The Google Maps API daily query limit has been reached!"
 msgstr ""
 
-#: src/Tribe/Geo_Loc.php:158
+#: src/Tribe/Geo_Loc.php:161
 msgid "Distance unit"
 msgstr ""
 
@@ -890,7 +898,7 @@ msgid_plural "View All %1$s %2$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/views/pro/widgets/modules/single-event.php:177
+#: src/views/pro/widgets/modules/single-event.php:194
 msgctxt "list separator for final two elements"
 msgid "and"
 msgstr ""
@@ -939,7 +947,7 @@ msgstr ""
 msgid "If fields are left empty when they're submitted, automatically fill them in with these values."
 msgstr ""
 
-#: src/admin-views/event-recurrence.php:498
+#: src/admin-views/event-recurrence.php:503
 msgid "Use this field if you want to override the auto-generated descriptions of event recurrence"
 msgstr ""
 
@@ -951,7 +959,7 @@ msgstr ""
 msgid "Displays events by day for the week."
 msgstr ""
 
-#: src/Tribe/Recurrence/Meta.php:1505
+#: src/Tribe/Recurrence/Meta.php:1506
 msgctxt "An unspecified end date"
 msgid "an unspecified date"
 msgstr ""
@@ -1028,66 +1036,66 @@ msgstr ""
 msgid "View all %1$s at this %2$s"
 msgstr "Δείτε όλες τις %1$s αυτής της %2$s"
 
-#: src/admin-views/event-recurrence.php:488
+#: src/admin-views/event-recurrence.php:493
 msgid "Add Exclusion"
 msgstr "Προσθέστε Εξαίρεση"
 
 #: src/admin-views/event-recurrence.php:63
-#: src/admin-views/event-recurrence.php:317
+#: src/admin-views/event-recurrence.php:322
 msgid "Once"
 msgstr "Μία φορά"
 
-#: src/Tribe/Recurrence/Meta.php:1278
+#: src/Tribe/Recurrence/Meta.php:1279
 msgctxt "Used when displaying the word \"day\" in \"the last day\" or \"the first day\""
 msgid "day"
 msgstr "μέρα"
 
-#: src/Tribe/Recurrence/Meta.php:1277
+#: src/Tribe/Recurrence/Meta.php:1278
 msgctxt "Used when displaying: \"the last Monday\" or \"the last day\""
 msgid "the last %1$s"
 msgstr "την τελευταία %1$s"
 
-#: src/Tribe/Recurrence/Meta.php:1276
+#: src/Tribe/Recurrence/Meta.php:1277
 msgctxt "Used when displaying: \"the fifth Monday\" or \"the fifth day\""
 msgid "the fifth %1$s"
 msgstr "την πέμπτη %1$s"
 
-#: src/Tribe/Recurrence/Meta.php:1275
+#: src/Tribe/Recurrence/Meta.php:1276
 msgctxt "Used when displaying: \"the fourth Monday\" or \"the fourth day\""
 msgid "the fourth %1$s"
 msgstr "την τέαρτη %1$s"
 
-#: src/Tribe/Recurrence/Meta.php:1274
+#: src/Tribe/Recurrence/Meta.php:1275
 msgctxt "Used when displaying: \"the third Monday\" or \"the third day\""
 msgid "the third %1$s"
 msgstr "την τρίτη %1$s"
 
-#: src/Tribe/Recurrence/Meta.php:1273
+#: src/Tribe/Recurrence/Meta.php:1274
 msgctxt "Used when displaying: \"the second Monday\" or \"the second day\""
 msgid "the second %1$s"
 msgstr "την δεύτερη %1$s"
 
-#: src/Tribe/Recurrence/Meta.php:1272
+#: src/Tribe/Recurrence/Meta.php:1273
 msgctxt "Used when displaying: \"the first Monday\" or \"the first day\""
 msgid "the first %1$s"
 msgstr "την πρώτη %1$s"
 
-#: src/Tribe/Recurrence/Meta.php:1271
+#: src/Tribe/Recurrence/Meta.php:1272
 msgctxt "Describes a day of the month (e.g. \"day 5\" or \"day 27\")"
 msgid "day %1$s"
 msgstr "μέρα %1$s"
 
-#: src/Tribe/Recurrence/Meta.php:1270
+#: src/Tribe/Recurrence/Meta.php:1271
 msgctxt "Placeholder text for a month (or months) before the user has selected any"
 msgid "[month]"
 msgstr "[μήνας]"
 
-#: src/Tribe/Recurrence/Meta.php:1269
+#: src/Tribe/Recurrence/Meta.php:1270
 msgctxt "Placeholder text for a day of the week (or days of the week) before the user has selected any"
 msgid "[day]"
 msgstr "[μέρα]"
 
-#: src/Tribe/Recurrence/Meta.php:1268
+#: src/Tribe/Recurrence/Meta.php:1269
 msgctxt "Joins the last item in a list of items (i.e. the \"and\" in Monday, Tuesday, and Wednesday)"
 msgid "and"
 msgstr "και"
@@ -1145,7 +1153,7 @@ msgid "hours"
 msgstr "ώρες"
 
 #: src/admin-views/event-recurrence.php:99
-#: src/admin-views/event-recurrence.php:351
+#: src/admin-views/event-recurrence.php:356
 #: src/views/pro/widgets/countdown-widget.php:20
 msgid "days"
 msgstr "days"
@@ -1437,7 +1445,7 @@ msgstr "Επιλέξτε μια Πολιτεία"
 msgid "No Default"
 msgstr "Δεν υπαρχεί προεπιλογή"
 
-#: src/admin-views/event-recurrence.php:493
+#: src/admin-views/event-recurrence.php:498
 msgid "Recurrence Description:"
 msgstr "Περιγραφή Επανάληψης:"
 
@@ -1466,59 +1474,59 @@ msgstr ""
 msgid "first"
 msgstr ""
 
-#: src/admin-views/event-recurrence.php:468
+#: src/admin-views/event-recurrence.php:473
 msgid "Frequency of recurring event must be a number"
 msgstr "Η συχνότητα της επαναλαμβανόμενης εκδήλωσης πρέπει να είναι αριθμός"
 
 #: src/admin-views/event-recurrence.php:81
-#: src/admin-views/event-recurrence.php:334
+#: src/admin-views/event-recurrence.php:339
 #: src/admin-views/recurrence/years.php:12
 msgid "Every"
 msgstr "Κάθε"
 
 #: src/admin-views/event-recurrence.php:62
-#: src/admin-views/event-recurrence.php:316
+#: src/admin-views/event-recurrence.php:321
 msgid "Yearly"
 msgstr "Ετήσια"
 
 #: src/admin-views/event-recurrence.php:61
-#: src/admin-views/event-recurrence.php:315
+#: src/admin-views/event-recurrence.php:320
 msgid "Monthly"
 msgstr "Μηνιαία"
 
 #: src/admin-views/event-recurrence.php:60
-#: src/admin-views/event-recurrence.php:314
+#: src/admin-views/event-recurrence.php:319
 msgid "Weekly"
 msgstr "Εβδομαδιαία"
 
 #: src/admin-views/event-recurrence.php:59
-#: src/admin-views/event-recurrence.php:313
+#: src/admin-views/event-recurrence.php:318
 msgid "Daily"
 msgstr "Καθημερινά"
 
 #: src/admin-views/event-recurrence.php:242
-#: src/admin-views/event-recurrence.php:460
+#: src/admin-views/event-recurrence.php:465
 msgid "You must select a recurrence end date"
 msgstr "Πρέπει να επιλέξετε ημερομηνία λήξης της επανάληψης"
 
 #: src/admin-views/event-recurrence.php:239
-#: src/admin-views/event-recurrence.php:457
+#: src/admin-views/event-recurrence.php:462
 msgctxt "occurence count text"
 msgid "events"
 msgstr "εκδηλώσεις"
 
 #: src/admin-views/event-recurrence.php:206
-#: src/admin-views/event-recurrence.php:425
+#: src/admin-views/event-recurrence.php:430
 msgid "never"
 msgstr ""
 
 #: src/admin-views/event-recurrence.php:205
-#: src/admin-views/event-recurrence.php:424
+#: src/admin-views/event-recurrence.php:429
 msgid "after"
 msgstr ""
 
 #: src/admin-views/event-recurrence.php:68
-#: src/admin-views/event-recurrence.php:322
+#: src/admin-views/event-recurrence.php:327
 #: src/admin-views/recurrence/months.php:2
 #: src/admin-views/recurrence/years.php:53
 msgid "On"
@@ -1529,12 +1537,12 @@ msgid "None"
 msgstr "Κανένα"
 
 #: src/admin-views/event-recurrence.php:56
-#: src/admin-views/event-recurrence.php:310
+#: src/admin-views/event-recurrence.php:315
 msgid "events"
 msgstr "events"
 
 #: src/admin-views/event-recurrence.php:55
-#: src/admin-views/event-recurrence.php:309
+#: src/admin-views/event-recurrence.php:314
 msgid "event"
 msgstr "event"
 
@@ -1718,157 +1726,157 @@ msgstr ""
 msgid "You are currently editing all events in a recurring series."
 msgstr "Αυτή τη στιγμή επεξεργάζεστε όλες τις εκδηλώσεις σε μια επαναλήψιμη σειρά."
 
-#: src/Tribe/Recurrence/Meta.php:1698
+#: src/Tribe/Recurrence/Meta.php:1699
 msgid " months"
 msgstr " μήνες"
 
-#: src/Tribe/Recurrence/Meta.php:1677
+#: src/Tribe/Recurrence/Meta.php:1678
 msgid "Recurring events will be created this far in advance"
 msgstr "Οι επαναλήψιμες εκδηλώσεις θα δημιουργηθούν εκ των προτέρων για τόσο καιρό "
 
-#: src/Tribe/Recurrence/Meta.php:1676
+#: src/Tribe/Recurrence/Meta.php:1677
 msgid "Create recurring events in advance for"
 msgstr "Δημιουργία επαναλήψιμων εκδηλώσεων εκ των προτέρων για"
 
-#: src/Tribe/Recurrence/Meta.php:1669
+#: src/Tribe/Recurrence/Meta.php:1670
 msgid "Automatically remove recurring event instances older than this"
 msgstr "Αυτόματη αφαίρεση των περιστάσεων επαναλήψιμης εκδήλωσης που είναι πιο παλιές απο αυτή"
 
-#: src/Tribe/Recurrence/Meta.php:1668
+#: src/Tribe/Recurrence/Meta.php:1669
 msgid "Clean up recurring events after"
 msgstr "Καθάρισε τις επαναλήψιμες εκδηλώσεις μετά"
 
-#: src/Tribe/Recurrence/Meta.php:1661
+#: src/Tribe/Recurrence/Meta.php:1662
 msgid "Allow users to decide whether to show all instances of a recurring event."
 msgstr "Επίτρεψε στους χρήστες να αποφασίζουν αν θα προβάλουν όλες τις περιστάσεις μιας επαναλήψιμης εκδήλωσης."
 
-#: src/Tribe/Recurrence/Meta.php:1660
+#: src/Tribe/Recurrence/Meta.php:1661
 msgid "Front-end recurring event instances toggle"
 msgstr "Εμφάνιση περιστάσεων επαναλήψιμης εκδήλωσης"
 
-#: src/Tribe/Recurrence/Meta.php:1654
+#: src/Tribe/Recurrence/Meta.php:1655
 msgid "Show only the first instance of each recurring event (only affects list-style views)."
 msgstr "Προβολή μόνο της πρώτης περίστασης της κάθε επαναλήψιμης εκδήλωσης (επηρρεάζει μόνο την προβολή σε στυλ λίστας)"
 
-#: src/Tribe/Recurrence/Meta.php:1653
+#: src/Tribe/Recurrence/Meta.php:1654
 msgid "Recurring event instances"
 msgstr "Περιστάσεις επαναλήψιμης εκδήλωσης"
 
-#: src/Tribe/Recurrence/Meta.php:1627
+#: src/Tribe/Recurrence/Meta.php:1628
 msgid ", "
 msgstr ","
 
-#: src/Tribe/Recurrence/Meta.php:1625
+#: src/Tribe/Recurrence/Meta.php:1626
 msgid " and "
 msgstr "και"
 
-#: src/Tribe/Recurrence/Meta.php:1623
+#: src/Tribe/Recurrence/Meta.php:1624
 msgid ", and "
 msgstr ", και"
 
-#: src/Tribe/Recurrence/Meta.php:1266 src/Tribe/Recurrence/Meta.php:1616
+#: src/Tribe/Recurrence/Meta.php:1267 src/Tribe/Recurrence/Meta.php:1617
 msgid "December"
 msgstr "Δεκεμβρίου"
 
-#: src/Tribe/Recurrence/Meta.php:1265 src/Tribe/Recurrence/Meta.php:1615
+#: src/Tribe/Recurrence/Meta.php:1266 src/Tribe/Recurrence/Meta.php:1616
 msgid "November"
 msgstr "Νοεμβρίου"
 
-#: src/Tribe/Recurrence/Meta.php:1264 src/Tribe/Recurrence/Meta.php:1614
+#: src/Tribe/Recurrence/Meta.php:1265 src/Tribe/Recurrence/Meta.php:1615
 msgid "October"
 msgstr "Οκτωβρίου"
 
-#: src/Tribe/Recurrence/Meta.php:1263 src/Tribe/Recurrence/Meta.php:1613
+#: src/Tribe/Recurrence/Meta.php:1264 src/Tribe/Recurrence/Meta.php:1614
 msgid "September"
 msgstr "Σεπτεμβρίου"
 
-#: src/Tribe/Recurrence/Meta.php:1262 src/Tribe/Recurrence/Meta.php:1612
+#: src/Tribe/Recurrence/Meta.php:1263 src/Tribe/Recurrence/Meta.php:1613
 msgid "August"
 msgstr "Αυγούστου"
 
-#: src/Tribe/Recurrence/Meta.php:1261 src/Tribe/Recurrence/Meta.php:1611
+#: src/Tribe/Recurrence/Meta.php:1262 src/Tribe/Recurrence/Meta.php:1612
 msgid "July"
 msgstr "Ιουλίου"
 
-#: src/Tribe/Recurrence/Meta.php:1260 src/Tribe/Recurrence/Meta.php:1610
+#: src/Tribe/Recurrence/Meta.php:1261 src/Tribe/Recurrence/Meta.php:1611
 msgid "June"
 msgstr "Ιουνίου"
 
-#: src/Tribe/Recurrence/Meta.php:1259 src/Tribe/Recurrence/Meta.php:1609
+#: src/Tribe/Recurrence/Meta.php:1260 src/Tribe/Recurrence/Meta.php:1610
 msgid "May"
 msgstr "Μαι"
 
-#: src/Tribe/Recurrence/Meta.php:1258 src/Tribe/Recurrence/Meta.php:1608
+#: src/Tribe/Recurrence/Meta.php:1259 src/Tribe/Recurrence/Meta.php:1609
 msgid "April"
 msgstr "Απριλίου"
 
-#: src/Tribe/Recurrence/Meta.php:1257 src/Tribe/Recurrence/Meta.php:1607
+#: src/Tribe/Recurrence/Meta.php:1258 src/Tribe/Recurrence/Meta.php:1608
 msgid "March"
 msgstr "Μαρτίου"
 
-#: src/Tribe/Recurrence/Meta.php:1256 src/Tribe/Recurrence/Meta.php:1606
+#: src/Tribe/Recurrence/Meta.php:1257 src/Tribe/Recurrence/Meta.php:1607
 msgid "February"
 msgstr "Φεβρουαρίου"
 
-#: src/Tribe/Recurrence/Meta.php:1255 src/Tribe/Recurrence/Meta.php:1605
+#: src/Tribe/Recurrence/Meta.php:1256 src/Tribe/Recurrence/Meta.php:1606
 msgid "January"
 msgstr "Ιανουαρίου"
 
-#: src/Tribe/Recurrence/Meta.php:1587
+#: src/Tribe/Recurrence/Meta.php:1588
 msgid ","
 msgstr ","
 
-#: src/Tribe/Recurrence/Meta.php:1585
+#: src/Tribe/Recurrence/Meta.php:1586
 msgid "and"
 msgstr "και"
 
-#: src/Tribe/Recurrence/Meta.php:1583
+#: src/Tribe/Recurrence/Meta.php:1584
 msgid ", and"
 msgstr ", και"
 
-#: src/Tribe/Recurrence/Meta.php:1251 src/Tribe/Recurrence/Meta.php:1576
+#: src/Tribe/Recurrence/Meta.php:1252 src/Tribe/Recurrence/Meta.php:1577
 #: src/admin-views/recurrence/months.php:88
 #: src/admin-views/recurrence/weeks.php:8
 #: src/admin-views/recurrence/years.php:134
 msgid "Sunday"
 msgstr "Κυριακή"
 
-#: src/Tribe/Recurrence/Meta.php:1250 src/Tribe/Recurrence/Meta.php:1575
+#: src/Tribe/Recurrence/Meta.php:1251 src/Tribe/Recurrence/Meta.php:1576
 #: src/admin-views/recurrence/months.php:87
 #: src/admin-views/recurrence/weeks.php:74
 #: src/admin-views/recurrence/years.php:133
 msgid "Saturday"
 msgstr "Σάββατο"
 
-#: src/Tribe/Recurrence/Meta.php:1249 src/Tribe/Recurrence/Meta.php:1574
+#: src/Tribe/Recurrence/Meta.php:1250 src/Tribe/Recurrence/Meta.php:1575
 #: src/admin-views/recurrence/months.php:86
 #: src/admin-views/recurrence/weeks.php:63
 #: src/admin-views/recurrence/years.php:132
 msgid "Friday"
 msgstr "Παρασκευή"
 
-#: src/Tribe/Recurrence/Meta.php:1248 src/Tribe/Recurrence/Meta.php:1573
+#: src/Tribe/Recurrence/Meta.php:1249 src/Tribe/Recurrence/Meta.php:1574
 #: src/admin-views/recurrence/months.php:85
 #: src/admin-views/recurrence/weeks.php:52
 #: src/admin-views/recurrence/years.php:131
 msgid "Thursday"
 msgstr "Πέμπτη"
 
-#: src/Tribe/Recurrence/Meta.php:1247 src/Tribe/Recurrence/Meta.php:1572
+#: src/Tribe/Recurrence/Meta.php:1248 src/Tribe/Recurrence/Meta.php:1573
 #: src/admin-views/recurrence/months.php:84
 #: src/admin-views/recurrence/weeks.php:41
 #: src/admin-views/recurrence/years.php:130
 msgid "Wednesday"
 msgstr "Τετάρτη"
 
-#: src/Tribe/Recurrence/Meta.php:1246 src/Tribe/Recurrence/Meta.php:1571
+#: src/Tribe/Recurrence/Meta.php:1247 src/Tribe/Recurrence/Meta.php:1572
 #: src/admin-views/recurrence/months.php:83
 #: src/admin-views/recurrence/weeks.php:30
 #: src/admin-views/recurrence/years.php:129
 msgid "Tuesday"
 msgstr "Τρίτη"
 
-#: src/Tribe/Recurrence/Meta.php:1245 src/Tribe/Recurrence/Meta.php:1570
+#: src/Tribe/Recurrence/Meta.php:1246 src/Tribe/Recurrence/Meta.php:1571
 #: src/admin-views/recurrence/months.php:82
 #: src/admin-views/recurrence/weeks.php:19
 #: src/admin-views/recurrence/years.php:128
@@ -1882,8 +1890,8 @@ msgstr "τελευταίο"
 
 #: src/admin-views/event-recurrence.php:59
 #: src/admin-views/event-recurrence.php:96
-#: src/admin-views/event-recurrence.php:313
-#: src/admin-views/event-recurrence.php:348
+#: src/admin-views/event-recurrence.php:318
+#: src/admin-views/event-recurrence.php:353
 #: src/admin-views/recurrence/months.php:90
 #: src/admin-views/recurrence/years.php:136
 msgid "day"
@@ -2139,7 +2147,7 @@ msgid "photo"
 msgstr "photo"
 
 #: src/Tribe/Main.php:73 src/admin-views/event-recurrence.php:104
-#: src/admin-views/event-recurrence.php:356
+#: src/admin-views/event-recurrence.php:361
 msgid "week"
 msgstr "week"
 
@@ -2159,75 +2167,75 @@ msgstr "Πληκτρολογήστε %s %s"
 msgid "%d %s"
 msgstr "%d %s"
 
-#: src/Tribe/Geo_Loc.php:1015
+#: src/Tribe/Geo_Loc.php:1073
 msgid "Fixed geolocation data for %d venues"
 msgstr "Επιδιόρθωση δεδομένων εντοπισμού γεωγραφικής θέσης για %d χώρους διεξαγωγής"
 
-#: src/Tribe/Geo_Loc.php:989
+#: src/Tribe/Geo_Loc.php:1047
 msgid "You have venues for which we don't have Geolocation information. <a href='%s'>Click here to generate it</a>."
 msgstr "Έχετε χώρους διεξαγωγής για τους οποίους δεν έχουμε πληροφορίες εντοπισμού γεωγραφικής θέσης (Geolocation). <a href='%s'>Πατήστε εδώ για δημιουργία</a>."
 
-#: src/Tribe/Geo_Loc.php:945
+#: src/Tribe/Geo_Loc.php:1003
 msgid "Fix venues data"
 msgstr "Επιδιόρθωση δεδομένων χώρων διεξαγωγής"
 
-#: src/Tribe/Geo_Loc.php:301
+#: src/Tribe/Geo_Loc.php:336
 msgid "Longitude"
 msgstr "Γεωγραφικό μήκος"
 
-#: src/Tribe/Geo_Loc.php:300
+#: src/Tribe/Geo_Loc.php:335
 msgid "Latitude"
 msgstr "Γεωγραφικό πλάτος"
 
-#: src/Tribe/Geo_Loc.php:296
+#: src/Tribe/Geo_Loc.php:331
 msgid "Use latitude + longitude"
 msgstr "Χρήση γεωγραφικού πλάτους + μήκους"
 
-#: src/Tribe/Geo_Loc.php:271
+#: src/Tribe/Geo_Loc.php:306
 msgid "Location"
 msgstr "Τοποθεσία"
 
-#: src/Tribe/Geo_Loc.php:270
+#: src/Tribe/Geo_Loc.php:305
 msgid "Near"
 msgstr "Κοντά στο"
 
-#: src/Tribe/Geo_Loc.php:236
+#: src/Tribe/Geo_Loc.php:239
 msgid "Map"
 msgstr "Χάρτης"
 
-#: src/Tribe/Geo_Loc.php:181
+#: src/Tribe/Geo_Loc.php:184
 msgid "Removes location search field from the events bar on all views except for map view."
 msgstr "Κατάργηση πεδίου αναζήτησης τοποθεσίας από μπάρα εκδηλώσεων σε όλες τις προβολές, εκτός από προβολή χάρτη."
 
-#: src/Tribe/Geo_Loc.php:180
+#: src/Tribe/Geo_Loc.php:183
 msgid "Hide location search"
 msgstr "Απόκρυψη αναζήτησης τοποθεσίας"
 
-#: src/Tribe/Geo_Loc.php:171
+#: src/Tribe/Geo_Loc.php:174
 msgid "You have %d venues for which we don't have geolocation data. We need to use the Google Maps API to get that information. Doing this may take a while (approximately 1 minute for every 200 venues)."
 msgstr ""
 
-#: src/Tribe/Geo_Loc.php:171
+#: src/Tribe/Geo_Loc.php:174
 msgid "Fix geolocation data"
 msgstr "Επιδιόρθωση δεδομένων εντοπισμού γεωγραφικής θέσης"
 
-#: src/Tribe/Geo_Loc.php:165 src/Tribe/Geo_Loc_Filter.php:26
+#: src/Tribe/Geo_Loc.php:168 src/Tribe/Geo_Loc_Filter.php:26
 msgid "Kilometers"
 msgstr "Χιλιόμετρα"
 
-#: src/Tribe/Geo_Loc.php:164 src/Tribe/Geo_Loc_Filter.php:23
+#: src/Tribe/Geo_Loc.php:167 src/Tribe/Geo_Loc_Filter.php:23
 msgid "Miles"
 msgstr "Μίλια"
 
-#: src/Tribe/Geo_Loc.php:151
+#: src/Tribe/Geo_Loc.php:154
 msgid "Set the distance that the location search covers (find events within X distance units of location search input)."
 msgstr "Ρυθμίστε την απόσταση που η αναζήτηση τοποθεσίας καλύπτει (βρείτε τις εκδηλώσεις εντός Χ μονάδων απόστασης από τη θέση αναζήτησης)."
 
-#: src/Tribe/Geo_Loc.php:149
+#: src/Tribe/Geo_Loc.php:152
 msgid "Map view search distance limit"
 msgstr "Όριο απόστασης αναζήτησης στην προβολή Χάρτη"
 
-#: src/Tribe/Geo_Loc.php:111
+#: src/Tribe/Geo_Loc.php:114
 msgid "Distance"
 msgstr "Απόσταση"
 

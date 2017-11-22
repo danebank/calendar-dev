@@ -100,6 +100,9 @@ class Tribe__Events__Pro__Geo_Loc {
 		add_action( 'tribe_events_pre_get_posts', array( $this, 'setup_geoloc_in_query' ) );
 		add_filter( 'tribe_events_list_inside_before_loop', array( $this, 'add_event_distance' ) );
 
+		add_filter( 'tribe_events_importer_venue_array', array( $this, 'filter_aggregator_add_overwrite_geolocation_value' ), 10, 4 );
+		add_filter( 'tribe_events_importer_venue_column_names', array( $this, 'filter_aggregator_add_overwrite_geolocation_column' ) );
+
 		add_action( 'admin_notices', array( $this, 'maybe_notify_about_google_over_limit' ) );
 	}
 
@@ -238,6 +241,38 @@ class Tribe__Events__Pro__Geo_Loc {
 		);
 
 		return $views;
+	}
+
+	/**
+	 * Filter of the Values for Venues and add Overwrite Coordinates
+	 *
+	 * @since  4.4.18
+	 *
+	 * @param  array                                          $venue     Venue Array for creating the Post
+	 * @param  WP_Post                                        $record    Aggregator Record Post
+	 * @param  int                                            $venue_id  Which Venue ID this belongs to
+	 * @param  Tribe__Events__Importer__File_Importer_Venues  $importer  Importer with the CSV data
+	 *
+	 * @return array
+	 */
+	public function filter_aggregator_add_overwrite_geolocation_value( $venue, $record, $venue_id, $importer ) {
+		$venue['OverwriteCoords'] = $importer->get_value_by_key( $record, 'venue_overwrite_coords' );
+		return $venue;
+	}
+
+	/**
+	 * Filter of the Columns for Venues and add Overwrite Coordinates
+	 *
+	 * @since  4.4.18
+	 *
+	 * @param  array  $columns  Previous columns
+	 *
+	 * @return array
+	 */
+	public function filter_aggregator_add_overwrite_geolocation_column( $columns ) {
+		$columns['venue_overwrite_coords'] = esc_html__( 'Venue Overwrite Coordinates', 'the-events-calendar' );
+
+		return $columns;
 	}
 
 	/**
@@ -467,7 +502,7 @@ class Tribe__Events__Pro__Geo_Loc {
 			update_post_meta( $venueId, self::LAT, (string) $_lat );
 			update_post_meta( $venueId, self::LNG, (string) $_lng );
 
-			delete_transient( self::ESTIMATION_CACHE_KEY );
+			$this->clear_min_max_coords_cache();
 			return true;
 		} else {
 			if ( 1 === (int) get_post_meta( $venueId, self::OVERWRITE, true ) ){
@@ -526,7 +561,7 @@ class Tribe__Events__Pro__Geo_Loc {
 		// Saving the aggregated address so we don't need to ping google on every save
 		update_post_meta( $venueId, self::ADDRESS, $address );
 
-		delete_transient( self::ESTIMATION_CACHE_KEY );
+		$this->clear_min_max_coords_cache();
 
 		return true;
 	}
@@ -683,7 +718,7 @@ class Tribe__Events__Pro__Geo_Loc {
 								THEN meta_value
 							END AS lng
 						FROM $wpdb->postmeta
-						WHERE 
+						WHERE
 							meta_key = %s
 							OR meta_key = %s
 					) AS coords
@@ -800,83 +835,106 @@ class Tribe__Events__Pro__Geo_Loc {
 	}
 
 	/**
-	 * Gets an estimated point in the center of all the venues
-	 * so we can center the map in the first load of map view
+	 * Get the minimum and maximum latitudes and longitudes for all published events.
 	 *
-	 * @return mixed
+	 * @return array(
+	 *      The minimum and maximum coordinates
+	 *
+	 *      @type float $max_lat
+	 *      @type float $max_lng
+	 *      @type float $min_lat
+	 *      @type float $min_lng
+	 * }
 	 */
-	public function estimate_center_point() {
-		global $wpdb, $wp_query;
+	public function get_min_max_coords() {
+		global $wpdb;
 
-		$data = get_transient( self::ESTIMATION_CACHE_KEY );
+		/** @var Tribe__Cache $cache */
+		$cache  = tribe( 'cache' );
+		$coords = $cache->get_transient( self::ESTIMATION_CACHE_KEY, 'save_post' );
 
-		if ( empty( $data ) ) {
-			$data = array();
-
-			// TODO: ask about the necessity of checking the current collection of posts. This seems like
-			// it limits the possible center-point which can screw up search bounding boxes
-			if ( ! empty( $wp_query->posts ) ) {
-				$prepared = array(
-					self::LAT,
-					self::LNG,
-					self::LAT,
-					self::LNG,
-				);
-
-				$event_ids = wp_list_pluck( $wp_query->posts, 'ID' );
-
-				$event_ids_prepared = array_fill( 0, count( $event_ids ), '%d' );
-				$event_ids_prepared = implode( ', ', $event_ids_prepared );
-
-				$prepared = array_merge( $prepared, $event_ids );
-
-				$sql = "
-					SELECT
-						MAX( `coords`.`lat` ) AS `max_lat`,
-						MAX( `coords`.`lng` ) AS `max_lng`,
-						MIN( `coords`.`lat` ) AS `min_lat`,
-						MIN( `coords`.`lng` ) AS `min_lng`
-					FROM (
-						SELECT `post_id` AS `venue_id`,
-						CASE
-							WHEN `meta_key` = %s
-							THEN CAST( `meta_value` AS DECIMAL( 10, 6 ) )
-						END AS `lat`,
-						CASE
-							WHEN `meta_key` = %s
-							THEN CAST( `meta_value` AS DECIMAL( 10, 6 ) )
-						END AS `lng`
-					FROM `{$wpdb->postmeta}`
-					WHERE
-						(
-							`meta_key` = %s
-							OR `meta_key` = %s
-						)
-						AND `post_id` IN (
-							SELECT `meta_value`
-							FROM `{$wpdb->postmeta}`
-							WHERE
-								`meta_key` = '_EventVenueID'
-								AND `post_id` IN ( {$event_ids_prepared} )
-						)
-					) AS `coords`
-				";
-
-				$sql = $wpdb->prepare( $sql, $prepared );
-
-				$data = $wpdb->get_row( $sql, ARRAY_A );
-
-				if ( ! empty( $data ) ) {
-					// If there is no geoloc data then each result will be null - we cannot pass null values
-					// to the Google Maps API however
-					$data = array_map( 'floatval', $data );
-				}
-			}
-
-			set_transient( self::ESTIMATION_CACHE_KEY, $data, 5000 );
+		// We have a cached value!
+		if ( is_array( $coords ) ) {
+			return $coords;
 		}
 
+		// Since we are just getting the IDs this is rather performant.
+		$published_events_query = tribe_get_events(
+			array(
+				'post_type'      => Tribe__Events__Main::POSTTYPE,
+				'posts_per_page' => - 1,
+				'fields'         => 'ids',
+				'orderby'        => 'none',
+			)
+		);
+
+		$event_ids_prepared = implode( ', ', $published_events_query );
+		$latitude_key = self::LAT;
+		$longitude_key = self::LNG;
+
+		$sql = "
+			SELECT
+				MAX( `coords`.`lat` ) AS `max_lat`,
+				MAX( `coords`.`lng` ) AS `max_lng`,
+				MIN( `coords`.`lat` ) AS `min_lat`,
+				MIN( `coords`.`lng` ) AS `min_lng`
+			FROM (
+				SELECT `post_id` AS `venue_id`,
+				CASE
+					WHEN `meta_key` = '{$latitude_key}'
+					THEN CAST( `meta_value` AS DECIMAL( 10, 6 ) )
+				END AS `lat`,
+				CASE
+					WHEN `meta_key` = '{$longitude_key}'
+					THEN CAST( `meta_value` AS DECIMAL( 10, 6 ) )
+				END AS `lng`
+			FROM `{$wpdb->postmeta}`
+			WHERE
+				(
+					`meta_key` = '{$latitude_key}'
+					OR `meta_key` = '{$longitude_key}'
+				)
+				AND `post_id` IN (
+					SELECT `meta_value`
+					FROM `{$wpdb->postmeta}`
+					WHERE
+						`meta_key` = '_EventVenueID'
+						AND `post_id` IN ( {$event_ids_prepared} )
+				)
+			) AS `coords`
+		";
+
+		$data = $wpdb->get_row( $sql, ARRAY_A );
+
+		if ( ! empty( $data ) ) {
+			// If there is no geoloc data then each result will be null - we cannot pass null values
+			// to the Google Maps API however
+			$data = array_map( 'floatval', $data );
+		}
+
+		$cache->set_transient( self::ESTIMATION_CACHE_KEY, $data, 86400, 'save_post' );
+
 		return $data;
+	}
+
+	/**
+	 * Deletes the cached value for the min/max lat/lng.
+	 *
+	 * @return bool Indicates success.
+	 */
+	public function clear_min_max_coords_cache() {
+		return tribe( 'cache' )->delete_transient( self::ESTIMATION_CACHE_KEY, 'save_post' );
+	}
+
+	/**
+	 * Get the minimum and maximum latitudes and longitudes for all published events.
+	 *
+	 * @deprecated 4.4.19 `\Tribe__Events__Pro__Geo_Loc::get_min_max_coords()`
+	 *
+	 * @return array
+	 */
+	public function estimate_center_point() {
+		return $this->get_min_max_coords();
 	}
 
 	/**

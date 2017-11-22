@@ -125,7 +125,7 @@ class Tribe__Events__Filterbar__Filters__Base_Meta extends Tribe__Events__Filter
 
 	protected function setup_join_clause() {
 		global $wpdb;
-		$this->joinClause = "LEFT JOIN {$wpdb->postmeta} AS {$this->join_name} ON ({$wpdb->posts}.ID = {$this->join_name}.post_id AND {$this->join_name}.meta_key = '{$this->relation_meta}')";
+		$this->joinClause = "INNER JOIN {$wpdb->postmeta} AS {$this->join_name} ON ({$wpdb->posts}.ID = {$this->join_name}.post_id AND {$this->join_name}.meta_key = '{$this->relation_meta}')";
 	}
 
 	protected function setup_where_clause() {

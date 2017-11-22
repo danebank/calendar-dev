@@ -36,7 +36,7 @@ class Tribe__Events__Filterbar__Filters__Time_Of_Day extends Tribe__Events__Filt
 			unset( $values[ $all_day_index ] );
 		}
 
-		$this->joinClause .= " LEFT JOIN {$wpdb->postmeta} AS all_day ON ({$wpdb->posts}.ID = all_day.post_id AND all_day.meta_key = '_EventAllDay')";
+		$this->joinClause .= " INNER JOIN {$wpdb->postmeta} AS all_day ON ({$wpdb->posts}.ID = all_day.post_id AND all_day.meta_key = '_EventAllDay')";
 
 		if ( ! empty( $values ) ) { // values other than allday
 			$this->joinClause .= " INNER JOIN {$wpdb->postmeta} AS tod_start_date ON ({$wpdb->posts}.ID = tod_start_date.post_id AND tod_start_date.meta_key = '_EventStartDate')";

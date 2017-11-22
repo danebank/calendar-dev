@@ -13,10 +13,10 @@
 	$.extend( tribe_ev.fn, {
 		set_form: function( params ) {
 
-			var has_sliders = false,
-				$body = $( 'body' ),
-				$form = $( '#tribe_events_filters_form' ),
-				$bar_form = $( '#tribe-bar-form' );
+			var has_sliders = false;
+			var $body       = $( 'body' );
+			var $form       = $( document.getElementById( 'tribe_events_filters_form' ) );
+			var $bar_form   = $( document.getElementById( 'tribe-bar-form' ) );
 
 			$body.addClass( 'tribe-reset-on' );
 
@@ -29,14 +29,14 @@
 					has_sliders = true;
 
 					$( '#tribe_events_filters_form .ui-slider' ).each( function() {
-						var s_id = $( this ).attr( 'id' );
-						var $this = $( '#' + s_id );
-						var $input = $this.prev();
+						var s_id     = $( this ).attr( 'id' );
+						var $this    = $( '#' + s_id );
+						var $input   = $this.prev();
 						var $display = $input.prev();
 						var settings = $this.slider( "option" );
 
-						$this.slider( "values", 0, settings.min );
-						$this.slider( "values", 1, settings.max );
+						$this.slider( 'values', 0, settings.min );
+						$this.slider( 'values', 1, settings.max );
 						$display.text( settings.min + " - " + settings.max );
 						$input.val( '' );
 					} );
@@ -82,10 +82,10 @@
 
 			if ( has_sliders ) {
 				$( '#tribe_events_filters_form .ui-slider' ).each( function() {
-					var s_id = $( this ).attr( 'id' );
-					var $this = $( '#' + s_id );
+					var s_id   = $( this ).attr( 'id' );
+					var $this  = $( '#' + s_id );
 					var $input = $this.prev();
-					var range = $input.val().split( '-' );
+					var range  = $input.val().split( '-' );
 
 					if ( range[0] !== '' ) {
 						var $display = $input.prev();
@@ -121,11 +121,11 @@
 
 				if ( val ) {
 					var first = tribe_filter.currency_symbol + val[0];
-					var last = tribe_filter.currency_symbol + val[1];
+					var last  = tribe_filter.currency_symbol + val[1];
 
 					if ( tribe_filter.reverse_position ) {
 						first = val[0] + tribe_filter.currency_symbol;
-						last = val[1] + tribe_filter.currency_symbol;
+						last  = val[1] + tribe_filter.currency_symbol;
 					}
 
 					$filter.closest( '.tribe_events_filter_item' ).addClass( 'active' ).find( '.tribe-filter-status' ).text( first + ' - ' + last );
@@ -135,9 +135,11 @@
 			}
 
 			$filter.closest( '.tribe_events_filter_item' ).find( '.tribe-filter-status' ).text( '' );
-			var value = $filter.serialize();
-			var text = '';
+			
+			var value                 = $filter.serialize();
+			var text                  = '';
 			var additional_selections = '';
+
 			type = $filter.attr( 'type' );
 
 			if ( $filter.data( 'select2' ) ) {
@@ -170,7 +172,8 @@
 			} else if ( 'checkbox' === type ) {
 
 				value = [];
-				text = [];
+				text  = [];
+
 				$filter.closest( '.tribe_events_filter_item' ).find( "input:checked" ).each( function () {
 					value.push( $( this ).val() );
 					if ( 'tribe_featuredevent[]' === $( this ).attr( 'name' )  ) {
@@ -229,8 +232,8 @@
 		category_update: function ( filter ) {
 
 			var $filter = $( filter );
-			var type = $filter.attr( 'type' );
-			var parent = '';
+			var type    = $filter.attr( 'type' );
+			var parent  = '';
 
 			if ( 'tribe_eventcategory[]' === $filter.attr( 'name' ) && 'checkbox' === type ) {
 
@@ -313,14 +316,14 @@
 
 	$( document ).ready( function() {
 
-		$( ".tribe_events_filter_item" ).filter( ":last" ).addClass( "tribe_last_child" );
+		$( '.tribe_events_filter_item' ).filter( ':last' ).addClass( 'tribe_last_child' );
 
-		var $form = $( '#tribe_events_filters_form' ),
-			$horizontal = $( '.tribe-events-filters-horizontal' ),
-			$tribe_events = $( '#tribe-events' ),
-			$body = $( 'body' ),
-			hover_filters = ( $tribe_events.length && $tribe_events.tribe_has_attr( 'data-hover-filters' ) && $tribe_events.data( 'hover-filters' ) === 1 ) ? true : false,
-			$event_cat = $( '#tribe_events_filter_item_eventcategory' );
+		var $form         = $( document.getElementById( 'tribe_events_filters_form' ) );
+		var $horizontal   = $( '.tribe-events-filters-horizontal' );
+		var $tribe_events = $( document.getElementById( 'tribe-events' ) );
+		var $body         = $( 'body' );
+		var hover_filters = ( $tribe_events.length && $tribe_events.tribe_has_attr( 'data-hover-filters' ) && $tribe_events.data( 'hover-filters' ) === 1 ) ? true : false;
+		var $event_cat    = $( document.getElementById( 'tribe_events_filter_item_eventcategory' ) );
 
 		if ( $( '#tribe_events_filter_item_eventcategory' ).length && ts.category ) {
 			ts.filter_cats = true;
@@ -390,6 +393,7 @@
 		if ( tribe_storage ) {
 
 			var fb_state = tribe_storage.getItem( 'tribe_events_filters_wrapper' );
+			
 			if ( fb_state == null && $body.is( '.tribe-filters-closed' ) ) {
 				fb_state = 'closed';
 			}
@@ -402,8 +406,8 @@
 
 			$( '.tribe_events_filter_item' ).each( function() {
 
-				var $this = $( this );
-				var f_id = $this.attr( 'id' );
+				var $this  = $( this );
+				var f_id   = $this.attr( 'id' );
 				var fts_id = tribe_storage.getItem( f_id );
 
 				if ( fts_id && fts_id == 'closed' ) {
@@ -412,7 +416,7 @@
 			} );
 		}
 
-		$( '#tribe_events_filters_wrapper' )
+		$( document.getElementById( 'tribe_events_filters_wrapper' ) )
 			.on( 'click', '#tribe_events_filters_reset', function( e ) {
 
 				e.preventDefault();
@@ -423,14 +427,14 @@
 				if ( $form.find( '.ui-slider' ).length ) {
 					$( '#tribe_events_filters_form .ui-slider' ).each( function() {
 
-						var s_id = $( this ).attr( 'id' );
-						var $this = $( '#' + s_id );
-						var $input = $this.prev();
+						var s_id     = $( this ).attr( 'id' );
+						var $this    = $( '#' + s_id );
+						var $input   = $this.prev();
 						var $display = $input.prev();
 						var settings = $this.slider( "option" );
 
-						$this.slider( "values", 0, settings.min );
-						$this.slider( "values", 1, settings.max );
+						$this.slider( 'values', 0, settings.min );
+						$this.slider( 'values', 1, settings.max );
 						$display.text( settings.min + " - " + settings.max );
 						$input.val( '' );
 					} );
@@ -518,6 +522,7 @@
 				}
 			} );
 
+		// Force-hides the filters when viewport is under mobile breakpoint (default: 767px)
 		function mobile_close_filters() {
 			if ( td.v_width < td.mobile_break ) {
 				close_filters( true );
@@ -538,14 +543,14 @@
 				ts.paged = 1;
 				if ( ts.view === 'past' || ts.view === 'list' ) {
 					if ( ts.filter_cats ) {
-						td.cur_url = $( '#tribe-events-header' ).attr( 'data-baseurl' );
+						td.cur_url = $( document.getElementById( 'tribe-events-header' ) ).attr( 'data-baseurl' );
 					}
 				}
 			}
 			else if ( ts.view === 'month' ) {
-				ts.date = $( '#tribe-events-header' ).attr( 'data-date' );
+				ts.date = $( document.getElementById( 'tribe-events-header' ) ).attr( 'data-date' );
 				if ( ts.filter_cats ) {
-					td.cur_url = $( '#tribe-events-header' ).attr( 'data-baseurl' );
+					td.cur_url = $( document.getElementById( 'tribe-events-header' ) ).attr( 'data-baseurl' );
 				}
 				else {
 					td.cur_url = tf.url_path( document.URL );
@@ -553,7 +558,7 @@
 
 			}
 			else if ( ts.view === 'week' || ts.view === 'day' ) {
-				ts.date = $( '#tribe-events-header' ).attr( 'data-date' );
+				ts.date = $( document.getElementById( 'tribe-events-header' ) ).attr( 'data-date' );
 			}
 		}
 
@@ -616,7 +621,7 @@
 
 			}
 
-			if ( $( '#tribe_events_filter_item_eventcategory' ).length && ts.category ) {
+			if ( $( document.getElementById( 'tribe_events_filter_item_eventcategory' ) ).length && ts.category ) {
 				$( '#tribe_events_filter_item_eventcategory input, #tribe_events_filter_item_eventcategory select' ).on( "change", function() {
 					tf.setup_ajax_timer( function() {
 						run_filtered_ajax();
@@ -625,7 +630,7 @@
 			}
 
 			$form
-				.on( "slidechange", ".ui-slider", function() {
+				.on( 'slidechange', '.ui-slider', function() {
 
 					tf.update_current_filter( this, 'slider' );
 
@@ -633,13 +638,13 @@
 						run_filtered_ajax();
 					} );
 				} )
-				.on( "change", "input, select", function() {
+				.on( 'change', 'input, select', function() {
 
 					tf.category_update( this );
 
 					tf.update_current_filter( this );
 
-					if ( ts.filter_cats && $( this ).parents( ".tribe_events_filter_item" ).attr( "id" ) === "tribe_events_filter_item_eventcategory" ) {
+					if ( ts.filter_cats && $( this ).parents( '.tribe_events_filter_item' ).attr( 'id' ) === 'tribe_events_filter_item_eventcategory' ) {
 						return;
 					}
 					tf.setup_ajax_timer( function() {
@@ -648,8 +653,9 @@
 				} );
 		}
 
-		$( te ).on( "tribe_ev_collectParams", function() {
+		$( te ).on( 'tribe_ev_collectParams', function() {
 			var tribe_filter_params = tf.serialize( '#tribe_events_filters_form', 'input, select' );
+			
 			if ( tribe_filter_params.length ) {
 				ts.filters = true;
 				ts.params = ts.params + '&' + tribe_filter_params;
@@ -667,7 +673,7 @@
 			}
 		} );
 
-		$( te ).on( "collect-params.tribe", function() {
+		$( te ).on( 'collect-params.tribe', function() {
 			if ( ts.filter_cats ) {
 				$( '#tribe_events_filter_item_eventcategory option:selected, #tribe_events_filter_item_eventcategory input:checked' ).remove();
 			}
@@ -692,7 +698,7 @@
 		// on load if there are any event categories checked slide open all terms
 		if ( $event_cat.length ) {
 			var terms = [];
-			$event_cat.find( "input:checked" ).each( function () {
+			$event_cat.find( 'input:checked' ).each( function () {
 				terms.push( $( this ).val() );
 			} );
 			if ( terms.length ) {
@@ -713,9 +719,9 @@
 			e.preventDefault();
 
 			var parent = tf.get_parent_cat_id( this, 'parent' );
+
 			$( this ).parent().toggleClass( 'closed' );
 			tf.toggle_child_fields( parent, $( this ).parent().hasClass( 'closed' ) );
-
 		} );
 
 	} );

@@ -55,7 +55,7 @@ class Tribe__Events__Filterbar__Filters__Organizer extends Tribe__Events__Filter
 
 	protected function setup_join_clause() {
 		global $wpdb;
-		$this->joinClause = "LEFT JOIN {$wpdb->postmeta} AS organizer_filter ON ({$wpdb->posts}.ID = organizer_filter.post_id AND organizer_filter.meta_key = '_EventOrganizerID')";
+		$this->joinClause = "INNER JOIN {$wpdb->postmeta} AS organizer_filter ON ({$wpdb->posts}.ID = organizer_filter.post_id AND organizer_filter.meta_key = '_EventOrganizerID')";
 	}
 
 	protected function setup_where_clause() {

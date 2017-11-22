@@ -834,6 +834,7 @@
 
 /* mobile styles */
 @media only screen and (max-width: 767px) {
+
 	.tribe-events-filter-view.tribe-filters-closed #tribe-events-content,
 	.tribe-events-filter-view.tribe-filters-open #tribe-events-content {
 		float: none;
@@ -879,6 +880,10 @@
 		margin-top: -1.5em;
 		padding: 0;
 		width: 100%;
+	}
+
+	.tribe-filters-closed #tribe_events_filters_wrapper.tribe-events-filters-horizontal {
+		height: 100%;
 	}
 
 	.tribe-filters-closed.tribe-bar-is-disabled #tribe_events_filters_wrapper.tribe-events-filters-horizontal,
@@ -928,6 +933,10 @@
 
 	#tribe_events_filter_control a + a {
 		margin: 10px 0;
+	}
+
+	.tribe-events-filters-horizontal #tribe_events_filter_control a + a {
+		margin: 0;
 	}
 
 	#tribe_events_filter_control #tribe_events_filters_reset {
@@ -1005,4 +1014,9 @@
 		padding: 0 5px 0 0;
 	}
 
+	.tribe-theme-twentytwelve.tribe-mobile {
+		#tribe_events_filters_wrapper.tribe-events-filters-vertical {
+			margin-bottom: 5em ;
+		}
+	}
 }

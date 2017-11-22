@@ -259,7 +259,7 @@ class Tribe__Events__Pro__Shortcodes__Tribe_Events {
 	public function prepare_query() {
 		$this->update_query( array(
 			'post_type'         => Tribe__Events__Main::POSTTYPE,
-			'eventDate'         => $this->get_attribute( 'date', $this->get_url_param( 'date' ) ),
+			'eventDate'         => $this->get_attribute( 'date', $this->get_url_param( 'tribe-bar-date' ) ),
 			'eventDisplay'      => $this->get_attribute( 'view' ),
 			'tribe_events_cat'  => $this->atts[ 'category' ],
 			'featured'          => $this->is_attribute_truthy( 'featured' ),

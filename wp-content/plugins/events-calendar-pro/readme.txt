@@ -4,8 +4,8 @@ Contributors: ModernTribe, barry.hughes, bordoni, borkweb, brianjessee, brook-tr
 Tags: events, calendar, event, venue, organizer, dates, date, google maps, conference, workshop, concert, meeting, seminar, summit, class, modern tribe, tribe, widget, pro
 Donate link: http://m.tri.be/29
 Requires at least: 4.5
-Tested up to: 4.8.1
-Stable tag: 4.4.17
+Tested up to: 4.8.3
+Stable tag: 4.4.19
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -202,6 +202,22 @@ Our Premium Plugins:
 * <a href="http://m.tri.be/fa" target="_blank">The Events Calendar: Filter Bar</a>
 
 == Changelog ==
+
+
+= [4.4.19] 2017-11-02 =
+
+* Fix - Prevent JS error when adding a Pro widget in the WP Customizer screen [72127]
+* Fix - Improved location search suggestions by ensuring all events are contained within the geo bounds [84757]
+* Fix - Resolved PHP notice that occurred on Community Tickets Add Event page when this plugin is active [90768]
+* Fix - Improved the handling of Daylight Savings Time when saving recurring events, so that each event in a series displays the correct timezone abbreviation (props: @airdrummer and others) [68685]
+* Fix - Added safety checks to improve the robustness of our recurring events logic when unexpected conditions are met (our thanks to Matt Sloan, Nathan Baldwin and others for highlighting this) [84366]
+* Fix - Improve shortcode pagination/view change url so it is reusable (props: @der.chef and others) [70021]
+* Language - 1 new string added, 80 updated, 0 fuzzied, and 0 obsoleted
+
+= [4.4.18] 2017-10-04 =
+
+* Feature - Add link to the featured image in the Advanced List widget. New filter introduced to control this: `tribe_events_list_widget_featured_image_link` (props to @cabadaj007  for the feature request) [88521]
+* Tweak - Add the possibility of importing Venue Overwrite Coordinates in Aggregator (thanks Christopher Curry for reporting) [84393]
 
 = [4.4.17] 2017-09-06 =
 

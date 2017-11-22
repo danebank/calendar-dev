@@ -72,7 +72,7 @@ class Tribe__Events__Filterbar__Filters__Venue extends Tribe__Events__Filterbar_
 	protected function setup_join_clause() {
 		global $wpdb;
 		$this->joinClause =
-			"LEFT JOIN {$wpdb->postmeta} 
+			"INNER JOIN {$wpdb->postmeta} 
 			AS venue_filter 
 			ON ({$wpdb->posts}.ID = venue_filter.post_id 
 			AND venue_filter.meta_key = '_EventVenueID')

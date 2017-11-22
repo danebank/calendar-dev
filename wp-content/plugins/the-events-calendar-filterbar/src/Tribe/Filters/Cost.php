@@ -164,7 +164,7 @@ class Tribe__Events__Filterbar__Filters__Cost extends Tribe__Events__Filterbar__
 
 	protected function setup_join_clause() {
 		global $wpdb;
-		$this->joinClause = " LEFT JOIN {$wpdb->postmeta} AS cost_filter ON ({$wpdb->posts}.ID = cost_filter.post_id)";
+		$this->joinClause = " INNER JOIN {$wpdb->postmeta} AS cost_filter ON ({$wpdb->posts}.ID = cost_filter.post_id)";
 	}
 
 	protected function setup_where_clause() {

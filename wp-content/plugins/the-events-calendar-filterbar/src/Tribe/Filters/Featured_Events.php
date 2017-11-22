@@ -50,7 +50,7 @@ class Tribe__Events__Filterbar__Filters__Featured_Events extends Tribe__Events__
 		/** @var \wpdb $wpdb */
 		global $wpdb;
 
-		$clause = "LEFT JOIN {$wpdb->postmeta} AS {$this->table_alias}
+		$clause = "INNER JOIN {$wpdb->postmeta} AS {$this->table_alias}
 			ON ({$wpdb->posts}.ID = {$this->table_alias}.post_id 
 			AND {$this->table_alias}.meta_key = %s)";
 

@@ -1076,6 +1076,7 @@ class Tribe__Events__Pro__Recurrence__Meta {
 				// recurrence meta entry might be malformed
 				if ( is_wp_error( $rule ) ) {
 					// let's not process it and let's not try to fix it as it might be a third-party modification
+					tribe( 'logger' )->log_debug( "Broken recurrence data detected for event #$event_id", __CLASS__ );
 					continue;
 				}
 

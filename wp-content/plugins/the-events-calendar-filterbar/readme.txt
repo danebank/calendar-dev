@@ -4,8 +4,8 @@ Contributors: ModernTribe, barry.hughes, bordoni, borkweb, brianjessee, brook-tr
 Tags: events, calendar, event, venue, organizer, dates, date, google maps, conference, workshop, concert, meeting, seminar, summit, class, modern tribe, tribe, widget, pro, filters, categories, sort, tags, taxonomy, find, search
 Donate link: http://m.tri.be/29
 Requires at least: 4.4
-Tested up to: 4.8
-Stable tag: 4.5
+Tested up to: 4.8.2
+Stable tag: 4.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -193,6 +193,12 @@ Our Premium Plugins:
 * <a href="http://m.tri.be/18h9" target="_blank">The Events Calendar: iCal Importer</a>
 
 == Changelog ==
+
+= [4.5.1] 2017-10-04 =
+
+* Fix - Fixed some layout issues with the "Show Filters"/"Collapse Filters" toggle button in mobile views (props to @ergosom for reporting this!) [75373]
+* Tweak - Improved performance by swapping out LEFT JOINs for INNER JOINs in SQL queries [88588]
+* Language - 2 new strings added, 17 updated, 0 fuzzied, and 2 obsoleted
 
 = [4.5] 2017-08-01 =
 

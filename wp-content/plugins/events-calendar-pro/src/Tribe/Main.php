@@ -59,7 +59,7 @@ if ( ! class_exists( 'Tribe__Events__Pro__Main' ) ) {
 		public $shortcodes;
 
 		const REQUIRED_TEC_VERSION = '4.5.6';
-		const VERSION = '4.4.17';
+		const VERSION = '4.4.19';
 
 		private function __construct() {
 			$this->pluginDir = trailingslashit( basename( EVENTS_CALENDAR_PRO_DIR ) );
@@ -514,7 +514,7 @@ if ( ! class_exists( 'Tribe__Events__Pro__Main' ) ) {
 				case 'single-event':
 					// a recurrence event with a bad date will throw 404 because of WP_Query limiting by date range
 					if ( is_404() || empty( $wp_query->query['eventDate'] ) ) {
-						$recurrence_check = array_merge( array( 'posts_per_page' => -1 ), $wp_query->query );
+						$recurrence_check = array_merge( array( 'posts_per_page' => 1 ), $wp_query->query );
 						unset( $recurrence_check['eventDate'] );
 						unset( $recurrence_check['tribe_events'] );
 
@@ -1281,7 +1281,7 @@ if ( ! class_exists( 'Tribe__Events__Pro__Main' ) ) {
 		}
 
 		public function load_widget_assets( $hook = null ) {
-			if ( 'widgets.php' !== $hook ) {
+			if ( 'widgets.php' !== $hook && 'customize.php' !== $hook ) {
 				return;
 			}
 
@@ -1340,7 +1340,7 @@ if ( ! class_exists( 'Tribe__Events__Pro__Main' ) ) {
 				$geoloc = Tribe__Events__Pro__Geo_Loc::instance();
 
 				$data = array(
-					'geocenter' => $geoloc->estimate_center_point(),
+					'geocenter' => $geoloc->get_min_max_coords(),
 					'map_tooltip_event' => esc_html( sprintf( _x( '%s: ', 'Event title map marker prefix', 'tribe-events-calendar-pro' ), tribe_get_event_label_singular() ) ),
 					'map_tooltip_address' => esc_html__( 'Address: ', 'tribe-events-calendar-pro' ),
 				);

@@ -58,12 +58,12 @@ class Tribe__Events__Filterbar__Additional_Fields__Values {
 			: '';
 
 		$query = "
-			SELECT    DISTINCT( meta_value )
-			FROM      $wpdb->postmeta
-			LEFT JOIN $wpdb->posts ON $wpdb->posts.ID = $wpdb->postmeta.post_id
-			WHERE     $wpdb->postmeta.meta_key = %s
-			  AND     $wpdb->posts.post_type = %s
-			          $and_post_status_set
+			SELECT     DISTINCT( meta_value )
+			FROM       $wpdb->postmeta
+			INNER JOIN $wpdb->posts ON $wpdb->posts.ID = $wpdb->postmeta.post_id
+			WHERE      $wpdb->postmeta.meta_key = %s
+			  AND      $wpdb->posts.post_type = %s
+			           $and_post_status_set
 		";
 
 		$values = (array) $wpdb->get_col( $wpdb->prepare(
