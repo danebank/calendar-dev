@@ -43,13 +43,36 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
         'type'    => 'select',
         'choices' => array(
             'default' => 'Default',
-            'poppins-lora' => 'Poppins / Lora',
+            'arbutusslab-opensans' => 'Arbutus Slab / Opensans',
             'montserrat-merriweather' => 'Montserrat / Merriweather',
+            'montserrat-opensans' => 'Montserrat / Opensans',
+            'oswald-muli' => 'Oswald / Muli',
+            'poppins-lora' => 'Poppins / Lora',
             'poppins-poppins' => 'Poppins / Poppins',
             'roboto-roboto' => 'Roboto / Roboto',
-            'arbutusslab-opensans' => 'Arbutus Slab / Opensans',
+            'robotoslab-roboto' => 'Roboto Slab / Roboto',
         )
     ) ) );
+
+    /*$wp_customize->add_setting( 'preset_color_scheme_setting', array(
+        'default'   => 'default',
+        'type'       => 'theme_mod',
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'wp_filter_nohtml_kses',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'preset_color_scheme_setting', array(
+        'label' => __( 'Color Scheme', 'wp-bootstrap-starter' ),
+        'section'    => 'typography',
+        'settings'   => 'preset_color_scheme_setting',
+        'type'    => 'select',
+        'choices' => array(
+            'default' => 'Default',
+            'red' => 'Red',
+            'green' => 'Green',
+            'orange' => 'Orange',
+            'pink' => 'Pink',
+        )
+    ) ) );*/
 
 
     /*Banner*/
@@ -74,7 +97,7 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'header_bg_color_setting',
         array(
-            'default'     => '#563D7C',
+            'default'     => '#fff',
             'sanitize_callback' => 'sanitize_hex_color',
         )
     );
@@ -181,7 +204,7 @@ function wp_bootstrap_starter_customizer_css()
 {
     ?>
     <style type="text/css">
-        #page-sub-header { background: <?php echo get_theme_mod('header_bg_color_setting', '#563D7C'); ?>; }
+        #page-sub-header { background: <?php echo get_theme_mod('header_bg_color_setting', '#fff'); ?>; }
     </style>
     <?php
 }

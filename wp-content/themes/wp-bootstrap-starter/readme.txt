@@ -12,10 +12,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-The best WordPress starter theme based on the most powerful frameworks in the world:
-    “_s” – by Automattic, the main people behind WordPress development
-    Twitter Bootstrap – the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
-    Font Awesome – a full suite of 675+ pictographic icons for easy scalable vector graphics on websites
+The best WordPress starter theme based on the most powerful frameworks in the world: "_s" (by Automattic, the main people behind WordPress development), Twitter Bootstrap (the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web) and Font Awesome (or Fontawesome, a full suite of 675+ pictographic icons for easy scalable vector graphics on websites). This theme, like WordPress, is licensed under the GPL. You can use this theme as base for your next WordPress theme project and you are allowed to remove the link at the footer or do whatever you want. Your feedback on how we can continuously improve this WordPress Starter Theme Bootstrap will be highly appreciated. Page templates includes Right-sidebar (default page template), Left-Sidebar, Full-Width, Blank with container, Blank without container Page. Other features - Currently using Bootstrap v4.0.0-beta.2 , Widgetized footer area, WooCommerce ready, Compatible with Contact Form 7, Compatible with Visual Composer, Compatible with Elementor Page Builder. This theme will be an active project which we will update from time to time. Check this page regularly for the updates.
+
 
 This theme, like WordPress, is licensed under the GPL. You can use this theme as base for your next WordPress theme project and you are allowed to remove the link at the footer or do whatever you want. Your feedback on how we can continuously improve this WordPress Starter Theme Bootstrap will be highly appreciated.
 
@@ -59,6 +57,30 @@ WP Bootstrap Starter includes support for Infinite Scroll in Jetpack.
 * Font Awesome icons, Copyright (C) Dave Gandy License: SIL Open Font License, version 1.1. - http://fontawesome.io/
 
 == Changelog ==
+= 3.0.2 - November 20, 2017 =
+* Add the slide arrow in the header
+
+= 3.0.1 - November 17, 2017 =
+* Update the appearance the page banner
+* Fix the text color of the presets
+
+= 3.0.0 - November 3, 2017 =
+* Update the header code base on bootstrap v4.0.0-beta.2
+* Style the page base on v4.0.0-beta.2
+* Add new typography preset
+
+= 2.5.5 - October 27, 2017 =
+* Fix the font in the typography preset
+* Add new typography preset
+
+= 2.5.4 - October 20, 2017 =
+* Add new Preset
+* Upgrade the bootstrap 4 alpha to bootstrap 4 beta
+
+= 2.5.3 - October 18, 2017 =
+* Add new Preset
+* Fix the fonts in Poppins / Lora
+
 = 2.5.2 - August 31, 2017 =
 * Make the subheader visible to front page
 

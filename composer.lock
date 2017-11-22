@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f3e529eaecdc4d12094caf5268167f2d",
+    "content-hash": "04cc80875a3ddc25b89934f3b03acf72",
     "packages": [
         {
             "name": "composer/installers",
@@ -125,15 +125,15 @@
         },
         {
             "name": "wpackagist-plugin/akismet",
-            "version": "4.0",
+            "version": "4.0.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/akismet/",
-                "reference": "tags/4.0"
+                "reference": "tags/4.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/akismet.4.0.zip",
+                "url": "https://downloads.wordpress.org/plugin/akismet.4.0.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -144,16 +144,36 @@
             "homepage": "https://wordpress.org/plugins/akismet/"
         },
         {
-            "name": "wpackagist-plugin/amazon-s3-and-cloudfront",
-            "version": "1.2",
+            "name": "wpackagist-plugin/all-in-one-wp-security-and-firewall",
+            "version": "4.3.1",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/amazon-s3-and-cloudfront/",
-                "reference": "tags/1.2"
+                "url": "https://plugins.svn.wordpress.org/all-in-one-wp-security-and-firewall/",
+                "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.1.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/all-in-one-wp-security-and-firewall.zip?timestamp=1510702145",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/all-in-one-wp-security-and-firewall/"
+        },
+        {
+            "name": "wpackagist-plugin/amazon-s3-and-cloudfront",
+            "version": "1.2.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/amazon-s3-and-cloudfront/",
+                "reference": "tags/1.2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.1.2.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -165,15 +185,15 @@
         },
         {
             "name": "wpackagist-plugin/amazon-web-services",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/amazon-web-services/",
-                "reference": "tags/1.0.3"
+                "reference": "tags/1.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/amazon-web-services.1.0.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/amazon-web-services.1.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -185,15 +205,15 @@
         },
         {
             "name": "wpackagist-plugin/google-analytics-for-wordpress",
-            "version": "6.2.3",
+            "version": "6.2.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/google-analytics-for-wordpress/",
-                "reference": "tags/6.2.3"
+                "reference": "tags/6.2.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.6.2.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.6.2.6.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -205,15 +225,15 @@
         },
         {
             "name": "wpackagist-plugin/my-wp-health-check",
-            "version": "1.4.2",
+            "version": "1.4.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/my-wp-health-check/",
-                "reference": "tags/1.4.2"
+                "reference": "tags/1.4.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/my-wp-health-check.1.4.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/my-wp-health-check.1.4.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -245,15 +265,15 @@
         },
         {
             "name": "wpackagist-plugin/the-events-calendar",
-            "version": "4.6",
+            "version": "4.6.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/the-events-calendar/",
-                "reference": "tags/4.6"
+                "reference": "tags/4.6.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/the-events-calendar.4.6.zip",
+                "url": "https://downloads.wordpress.org/plugin/the-events-calendar.4.6.6.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -265,15 +285,15 @@
         },
         {
             "name": "wpackagist-plugin/the-events-calendar-category-colors",
-            "version": "4.6.8",
+            "version": "4.6.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/the-events-calendar-category-colors/",
-                "reference": "tags/4.6.8"
+                "reference": "tags/4.6.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/the-events-calendar-category-colors.4.6.8.zip",
+                "url": "https://downloads.wordpress.org/plugin/the-events-calendar-category-colors.4.6.9.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -305,15 +325,15 @@
         },
         {
             "name": "wpackagist-theme/wp-bootstrap-starter",
-            "version": "2.5.2",
+            "version": "3.0.2",
             "source": {
                 "type": "svn",
                 "url": "https://themes.svn.wordpress.org/wp-bootstrap-starter/",
-                "reference": "2.5.2"
+                "reference": "3.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/wp-bootstrap-starter.2.5.2.zip",
+                "url": "https://downloads.wordpress.org/theme/wp-bootstrap-starter.3.0.2.zip",
                 "reference": null,
                 "shasum": null
             },

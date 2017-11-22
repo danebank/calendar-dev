@@ -17,6 +17,7 @@
         "wpackagist-plugin/the-events-calendar": "*",
         "wpackagist-plugin/the-events-calendar-category-colors": "*",
         "wpackagist-plugin/google-analytics-for-wordpress": "*",
-        "wpackagist-plugin/wp-updates-notifier": "*"
+        "wpackagist-plugin/wp-updates-notifier": "*",
+	"wpackagist-plugin/all-in-one-wp-security-and-firewall": "*"
     }
 }

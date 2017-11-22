@@ -25,32 +25,32 @@
     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
 	<header id="masthead" class="site-header navbar-static-top" role="banner">
         <div class="container">
-            <nav class="navbar navbar-toggleable-md navbar-light">
-
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <nav class="navbar navbar-expand-xl navbar-dark p-0">
                 <div class="navbar-brand">
                     <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
                         <a href="<?php echo esc_url( home_url( '/' )); ?>">
-                            <img src="<?php echo get_theme_mod( 'wp_bootstrap_starter_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                            <img src="<?php echo esc_attr(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
                         </a>
                     <?php else : ?>
                         <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
                     <?php endif; ?>
 
                 </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
                 <?php
                 wp_nav_menu(array(
-                    'theme_location'    => 'primary',
-                    'container'       => 'div',
-                    'container_id'    => '',
-                    'container_class' => 'collapse navbar-collapse justify-content-end',
-                    'menu_id'         => false,
-                    'menu_class'      => 'navbar-nav',
-                    'depth'           => 3,
-                    'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
-                    'walker'          => new wp_bootstrap_navwalker()
+                'theme_location'    => 'primary',
+                'container'       => 'div',
+                'container_id'    => '',
+                'container_class' => 'collapse navbar-collapse justify-content-end',
+                'menu_id'         => false,
+                'menu_class'      => 'navbar-nav',
+                'depth'           => 3,
+                'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
+                'walker'          => new wp_bootstrap_navwalker()
                 ));
                 ?>
 
@@ -65,7 +65,7 @@
                     if(get_theme_mod( 'header_banner_title_setting' )){
                         echo get_theme_mod( 'header_banner_title_setting' );
                     }else{
-                        echo get_bloginfo('name');
+                        echo 'Wordpress + Bootstrap';
                     }
                     ?>
                 </h1>
@@ -74,10 +74,11 @@
                     if(get_theme_mod( 'header_banner_tagline_setting' )){
                         echo get_theme_mod( 'header_banner_tagline_setting' );
                 }else{
-                        echo esc_html__('To customize the contents of this header banner and other elements of your site go to Dashboard - Appearance - Customize','wp-bootstrap-starter');
+                        echo esc_html__('To customize the contents of this header banner and other elements of your site go to Dashboard > Appearance > Customize','wp-bootstrap-starter');
                     }
                     ?>
                 </p>
+                <a href="#content" class="page-scroller"><i class="fa fa-fw fa-angle-down"></i></a>
             </div>
         </div>
     <?php endif; ?>
