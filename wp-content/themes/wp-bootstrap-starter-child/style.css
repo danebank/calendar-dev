@@ -43,8 +43,8 @@ header h1 {
 header#masthead {
     box-shadow: none;
     margin-bottom: 0;
-    background-color: none;
-    border-bottom: none;
+    background-color: initial;
+    border-bottom: initial;
 }
 #content.site-content {
   padding-bottom: 3.75rem;
