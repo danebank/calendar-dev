@@ -30,7 +30,7 @@
 			</div>
 		</div>
 		<div class="container">
-        <nav class="navbar navbar-toggleable-md navbar-light">
+        <nav class="navbar navbar-expand-md navbar-light">
 
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
